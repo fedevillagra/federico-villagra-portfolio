@@ -1,0 +1,148 @@
+import { organizations as org, profile, technologies as tech } from "./facts";
+import type { PortfolioContent } from "./types";
+
+export const es = {
+  metadata: {
+    title: `${profile.name} | ${profile.currentRole}`,
+    description: `${profile.currentRole} en ${org.epam}. Trabajo en pipelines de telecomunicaciones con ${tech.java}, ${tech.python}, ${tech.oracle} y ${tech.kafka}.`,
+  },
+  hero: {
+    description: `Trabajo en ${org.epam} como ${profile.currentRole}, desarrollando y manteniendo pipelines de datos en un proyecto de telecomunicaciones para ${org.claro}.`,
+    area: "Ingeniería de datos / Telecomunicaciones",
+    technologies: "Mis tecnologías principales",
+    cta: "Conocé mi experiencia profesional",
+  },
+  headings: {
+    "current-work": "Mi trabajo en ingeniería de datos",
+    experience: "Experiencia profesional",
+    skills: "Conocimientos técnicos",
+    education: "Formación y credenciales seleccionadas",
+    additional: "Información adicional",
+  },
+  labels: {
+    language: "Idioma",
+    navigation: "Secciones de la página",
+    skip: "Saltar al contenido principal",
+    employer: "Empleador",
+    project: "Proyecto / cliente",
+    area: "Área",
+    location: "Ubicación",
+    present: "Actualidad",
+    technologies: "Tecnologías utilizadas",
+    context:
+      "Contexto tecnológico del producto — no implica autoría de su desarrollo",
+    credentials: "Credenciales seleccionadas",
+    inProgress: "Estudios en curso",
+    completed: "Formación completada",
+    english: "Inglés",
+    englishDescription: "Intermedio alto",
+  },
+  currentWork: {
+    introduction:
+      "Trabajo sobre pipelines ETL productivos que integran datos de proveedores y plataformas de red de telecomunicaciones, desde la extracción y transformación hasta la persistencia y el consumo analítico.",
+    responsibilities: [
+      `Desarrollo y mantengo componentes Extractor, Parser y Loader con ${tech.java} y ${tech.python}.`,
+      `Desarrollo y optimizo packages, procedures y functions en ${tech.oracle}, y utilizo ${tech.kafka} para la comunicación entre componentes.`,
+      "Integro nuevas fuentes de datos, equipos, contadores y KPIs a flujos existentes.",
+      "Investigo incidentes productivos mediante SQL y logs, sigo los datos de extremo a extremo y ejecuto recuperaciones y reprocesamientos históricos.",
+      "Desarrollo controles automáticos de detección y recuperación ante fallas, y valido la calidad de datos después de las implementaciones.",
+    ],
+  },
+  experiences: {
+    data: {
+      role: profile.currentRole,
+      summary:
+        "Desarrollo, mantenimiento y soporte productivo de procesos ETL para datos de telecomunicaciones.",
+      responsibilities: [
+        "Mantengo flujos de datos desde la extracción hasta su transformación, persistencia y consumo analítico.",
+        "Colaboro con analistas funcionales, infraestructura y otros equipos técnicos en requerimientos e incidentes.",
+      ],
+    },
+    automation: {
+      role: "Junior Software Test Automation Engineer",
+      summary:
+        "QA y automatización de pruebas para un producto multifuncional de plantas de hormigón que integra interfaz web, servicios, base de datos y comunicación con PLC.",
+      responsibilities: [
+        "Derivé casos de prueba de los requisitos, ejecuté pruebas funcionales y técnicas manuales y registré informes con trazabilidad en Jira.",
+        "Desarrollé automatización de interfaz con el modelo Page Object y ejecuté pruebas de regresión después de las correcciones.",
+        "Apoyé las pruebas del lado del PLC mediante la investigación de simuladores y la validación de temas MQTT, secuencias y sincronización de datos.",
+      ],
+    },
+    internship: {
+      role: "Pasante de QA automatizado (Java)",
+      summary:
+        "Programa de formación profesional en pruebas automatizadas de software con orientación de mentores senior.",
+      responsibilities: [
+        "Desarrollé y ejecuté pruebas automatizadas con una arquitectura de pruebas en capas.",
+        "Apliqué buenas prácticas de código, diseño modular y pruebas mantenibles, con formación adicional en PL/SQL y habilidades interpersonales.",
+      ],
+    },
+    web: {
+      role: "Desarrollador web",
+      summary:
+        "Desarrollo a tiempo parcial para una plataforma de comercio electrónico dedicada a capacitaciones y certificaciones para instructores de fitness y danza.",
+      responsibilities: [
+        "Creé y actualicé contenido del sitio y desarrollé plugins y scripts personalizados.",
+        "Mejoré flujos de gestión de productos, implementé diseños adaptables y estructuras orientadas a SEO, y colaboré con equipos no técnicos.",
+      ],
+    },
+  },
+  skills: {
+    data: {
+      title: "Pipelines e integración de datos",
+      description: "Herramientas principales de mi trabajo actual en ETL.",
+    },
+    operations: {
+      title: "Operación y resolución de incidentes",
+      description:
+        "Investigación en producción, scripting y control de versiones.",
+    },
+    testing: {
+      title: "Experiencia previa en automatización de pruebas",
+      description: "Pruebas de interfaz, regresión y suites mantenibles.",
+    },
+    web: {
+      title: "Experiencia previa en desarrollo web",
+      description:
+        "Gestión de contenido, comercio electrónico y funcionalidades personalizadas.",
+    },
+    devops: {
+      title: "Formación en DevOps",
+      description:
+        "Herramientas de formación en CI/CD, contenedores, infraestructura en la nube y monitoreo; no se presentan como especialidad laboral.",
+    },
+    training: {
+      title: "Formación web y universitaria",
+      description:
+        "Tecnologías estudiadas o utilizadas en proyectos educativos, diferenciadas de la experiencia productiva.",
+    },
+  },
+  education: {
+    university: {
+      title: "Ingeniería en Computación",
+      description:
+        "Estudios universitarios en arquitectura de software, patrones de diseño, algoritmos, estructuras de datos, concurrencia y sistemas operativos, con proyectos de hardware y software en equipo.",
+    },
+    devops: {
+      title: "Formación en DevOps",
+      description:
+        "Formación en automatización de entregas, contenedores, infraestructura como código, servicios en la nube, administración de Linux y monitoreo, con un proyecto final en equipo.",
+    },
+    coderhouse: {
+      title: "Programa de Desarrollo Web",
+      description:
+        "Formación completada en JavaScript, React y desarrollo backend, con entregas semanales, mentorías y proyectos finales evaluados.",
+    },
+    utn: {
+      title: "Diplomatura en Desarrollo Web Full-Stack",
+      description:
+        "Formación completada en interfaces adaptables, desarrollo backend y bases de datos relacionales, con tres proyectos individuales.",
+    },
+  },
+  additional: {
+    evolution:
+      "Mi recorrido desde el desarrollo web, pasando por la automatización de pruebas, hasta la ingeniería de datos aporta una mirada centrada en la validación, la fiabilidad y la calidad del software a mi trabajo actual.",
+    collaboration:
+      "Trabajo en entornos Agile, Scrum y Kanban, con comunicación proactiva, colaboración y adaptación entre equipos técnicos y no técnicos.",
+  },
+} satisfies PortfolioContent;
