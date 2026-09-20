@@ -44,11 +44,11 @@ Estas instrucciones se aplican a todo el repositorio. Respetar el alcance de cad
 ## Dirección visual
 
 - Identidad: **Perfil editorial contemporáneo + precisión de ingeniería + presencia humana**.
-- Priorizar composición editorial, espacios generosos, ritmo, jerarquía tipográfica fuerte, fotografía natural, pocas superficies encerradas e información técnica integrada. Evitar exceso de cards.
+- Buscar una web visualmente rica y art-directed, con imágenes integradas a la composición, layouts variados, cambios de escala y ritmo, geometría y jerarquía tipográfica fuerte. No reducir la identidad a texto, líneas y whitespace ni a una sucesión de cards. Seguir `docs/design-direction.md` para referencias, criterios de imágenes y motion, respetando el alcance de cada etapa.
 - Incorporar precisión al distinguir cargo, empleador y cliente, y agrupar tecnologías por contexto de uso. Usar un único esquema útil de Data Engineering, por ejemplo Extractor → Parser → Loader, sin inventar arquitectura del cliente.
 - Incluir pequeñas dosis de voz personal y evolución profesional en segundo plano. No convertir el sitio en documentación técnica ni en una bitácora narrativa.
 - Fotografías: `docs/visual-references/portrait-04.webp` es candidata al Hero; `portrait-02.webp` es opcional para una sección personal. No es obligatorio usar ambas. Conservar fondos naturales; no agregar halos, efectos artificiales ni transformar las fotos en ilustraciones.
-- Microinteracciones sutiles que no retrasen contenido. Diseñar para textos en ambos idiomas sin alturas rígidas que los recorten.
+- Evaluar fotografías e imágenes generadas por propósito, composición, crop desktop/mobile, peso y tamaños responsive; no utilizarlas todas por defecto ni presentarlas como evidencia de proyectos reales. Microinteracciones sutiles que no retrasen contenido. Diseñar para textos en ambos idiomas sin alturas rígidas que los recorten. No usar scroll hijacking ni secuencias frame-by-frame controladas por scroll.
 - Evitar estética genérica de startup, cyberpunk, terminales falsas decorativas, lluvia de código, exceso de gradientes, glassmorphism indiscriminado, nubes de logos, dashboards ficticios, métricas inventadas y animaciones de escritura. No introducir WebGL/3D sin justificación clara.
 
 ## Arquitectura y performance

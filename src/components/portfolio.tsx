@@ -1,11 +1,10 @@
 import { content } from "@/content";
+import { certifications } from "@/content/certifications";
 import {
-  credentials,
   type EducationId,
   type ExperienceId,
   education,
   experiences,
-  heroTechnologies,
   organizations,
   type Period,
   profile,
@@ -14,8 +13,9 @@ import {
   type TechnologyId,
   technologies,
 } from "@/content/facts";
-import { sectionIds } from "@/content/types";
-import { type Locale, locales } from "@/i18n/locales";
+import type { Locale } from "@/i18n/locales";
+import { Hero } from "./hero";
+import { SiteHeader } from "./site-header";
 
 function technologyList(ids: readonly TechnologyId[], locale: Locale) {
   return new Intl.ListFormat(locale, {
@@ -48,64 +48,11 @@ function PeriodText({ period, locale }: { period: Period; locale: Locale }) {
 
 export function Portfolio({ locale }: { locale: Locale }) {
   const copy = content[locale];
-  const current = experiences.data;
   return (
     <>
-      <header className="site-header">
-        <a href="#main-content">{copy.labels.skip}</a>
-        <nav aria-label={copy.labels.language}>
-          <ul className="inline-list">
-            {Object.entries(locales).map(([code, language]) => (
-              <li key={code}>
-                <a
-                  href={language.path}
-                  lang={code}
-                  hrefLang={code}
-                  aria-current={code === locale ? "page" : undefined}
-                >
-                  {code === locale ? (
-                    <strong>{language.label}</strong>
-                  ) : (
-                    language.label
-                  )}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <nav aria-label={copy.labels.navigation}>
-          <ul className="inline-list">
-            {sectionIds.map((id) => (
-              <li key={id}>
-                <a href={`#${id}`}>{copy.headings[id]}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
-      <main id="main-content" tabIndex={-1}>
-        <header className="introduction">
-          <h1>{profile.name}</h1>
-          <p lang="en">
-            <strong>{profile.currentRole}</strong>
-          </p>
-          <p>{copy.hero.description}</p>
-          <dl>
-            <dt>{copy.labels.employer}</dt>
-            <dd>{organizations[current.employer]}</dd>
-            <dt>{copy.labels.project}</dt>
-            <dd>{organizations[current.project]}</dd>
-            <dt>{copy.labels.area}</dt>
-            <dd>{copy.hero.area}</dd>
-            <dt>{copy.labels.location}</dt>
-            <dd>{profile.location}</dd>
-          </dl>
-          <p>
-            {copy.hero.technologies}: {technologyList(heroTechnologies, locale)}
-            .
-          </p>
-          <a href="#experience">{copy.hero.cta}</a>
-        </header>
+      <SiteHeader locale={locale} />
+      <main id="main-content" className="page-width" tabIndex={-1}>
+        <Hero locale={locale} />
 
         <section id="current-work" aria-labelledby="current-work-heading">
           <h2 id="current-work-heading">{copy.headings["current-work"]}</h2>
@@ -198,16 +145,46 @@ export function Portfolio({ locale }: { locale: Locale }) {
               </article>
             );
           })}
-          <h3>{copy.labels.credentials}</h3>
-          <ul>
-            {credentials.map((credential) => (
-              <li key={credential.id}>
-                <span lang={credential.lang}>{credential.title}</span>
-                {" — "}
-                {organizations[credential.issuer]}
-              </li>
-            ))}
-          </ul>
+        </section>
+
+        <section id="certifications" aria-labelledby="certifications-heading">
+          <h2 id="certifications-heading">{copy.headings.certifications}</h2>
+          {certifications.map((credential) => (
+            <article
+              key={credential.id}
+              aria-labelledby={`certification-${credential.id}`}
+            >
+              <h3
+                id={`certification-${credential.id}`}
+                lang={credential.nameLanguage}
+              >
+                {credential.name}
+              </h3>
+              <p>{organizations[credential.issuer]}</p>
+              {credential.kind === "group" && (
+                <p>{copy.labels.credentialGroup}</p>
+              )}
+              <ul>
+                {credential.documents.map((document, index) => (
+                  <li key={document.id}>
+                    <a
+                      href={document.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {copy.labels.certificate}
+                      {credential.kind === "group" ? ` ${index + 1}` : ""}
+                      {": "}
+                      <span lang={credential.nameLanguage}>
+                        {document.name ?? credential.name}
+                      </span>
+                      {` (${copy.labels.newTab})`}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </section>
 
         <section id="additional" aria-labelledby="additional-heading">

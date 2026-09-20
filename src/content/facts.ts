@@ -7,6 +7,7 @@ export const profile = {
 } as const;
 
 export const organizations = {
+  openai: "OpenAI",
   epam: "EPAM Systems",
   claro: "CLARO",
   indumix: "INDUMIX",
@@ -169,13 +170,3 @@ export const education = {
   },
 } as const satisfies Record<string, EducationFact>;
 export type EducationId = keyof typeof education;
-
-export const credentials = [
-  {
-    id: "english",
-    title: "English Language – B2 Level (CEFR)",
-    issuer: "unc",
-    lang: "en",
-  },
-  { id: "engx", title: "ENGX BOOTCAMP COURSE", issuer: "epam", lang: "en" },
-] as const;

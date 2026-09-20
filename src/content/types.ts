@@ -5,6 +5,7 @@ export const sectionIds = [
   "experience",
   "skills",
   "education",
+  "certifications",
   "additional",
 ] as const;
 export type SectionId = (typeof sectionIds)[number];
@@ -29,7 +30,9 @@ export type PortfolioContent = {
     present: string;
     technologies: string;
     context: string;
-    credentials: string;
+    certificate: string;
+    newTab: string;
+    credentialGroup: string;
     inProgress: string;
     completed: string;
     english: string;

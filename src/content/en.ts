@@ -16,7 +16,8 @@ export const en = {
     "current-work": "My work in Data Engineering",
     experience: "Professional experience",
     skills: "Technical knowledge",
-    education: "Education and selected credentials",
+    education: "Education",
+    certifications: "Certifications",
     additional: "Additional information",
   },
   labels: {
@@ -31,7 +32,9 @@ export const en = {
     technologies: "Technologies used",
     context:
       "Product technology context — not a claim of development ownership",
-    credentials: "Selected credentials",
+    certificate: "View certificate",
+    newTab: "opens in a new tab",
+    credentialGroup: "Certificates from the MERN web development program.",
     inProgress: "Studies in progress",
     completed: "Completed training",
     english: "English",
