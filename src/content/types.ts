@@ -97,5 +97,10 @@ export type PortfolioContent = {
     emphasis: Record<Exclude<EducationId, "university">, string>;
   };
   education: Record<EducationId, { title: string; description: string }>;
+  credentialIndex: {
+    headline: string;
+    introduction: string;
+    imageCaption: string;
+  };
   additional: { evolution: string; collaboration: string };
 };

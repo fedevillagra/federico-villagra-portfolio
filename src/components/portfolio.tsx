@@ -1,7 +1,7 @@
 import { content } from "@/content";
-import { certifications } from "@/content/certifications";
-import { organizations, profile } from "@/content/facts";
+import { profile } from "@/content/facts";
 import type { Locale } from "@/i18n/locales";
+import { Certifications } from "./certifications";
 import { CurrentWork } from "./current-work";
 import { Education } from "./education";
 import { Experience } from "./experience";
@@ -25,45 +25,7 @@ export function Portfolio({ locale }: { locale: Locale }) {
 
         <Education locale={locale} />
 
-        <section id="certifications" aria-labelledby="certifications-heading">
-          <h2 id="certifications-heading">{copy.headings.certifications}</h2>
-          {certifications.map((credential) => (
-            <article
-              key={credential.id}
-              aria-labelledby={`certification-${credential.id}`}
-            >
-              <h3
-                id={`certification-${credential.id}`}
-                lang={credential.nameLanguage}
-              >
-                {credential.name}
-              </h3>
-              <p>{organizations[credential.issuer]}</p>
-              {credential.kind === "group" && (
-                <p>{copy.labels.credentialGroup}</p>
-              )}
-              <ul>
-                {credential.documents.map((document, index) => (
-                  <li key={document.id}>
-                    <a
-                      href={document.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {copy.labels.certificate}
-                      {credential.kind === "group" ? ` ${index + 1}` : ""}
-                      {": "}
-                      <span lang={credential.nameLanguage}>
-                        {document.name ?? credential.name}
-                      </span>
-                      {` (${copy.labels.newTab})`}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </section>
+        <Certifications locale={locale} />
 
         <section id="additional" aria-labelledby="additional-heading">
           <h2 id="additional-heading">{copy.headings.additional}</h2>

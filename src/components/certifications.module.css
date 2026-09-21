@@ -1,0 +1,195 @@
+.section {
+  --credential-rule: color-mix(in srgb, var(--accent) 25%, var(--border));
+  max-width: none;
+  margin-block-start: 0;
+  padding-block: var(--space-8) var(--space-9);
+  border: 0;
+  color: var(--background);
+  background: var(--accent);
+  box-shadow: 0 0 0 100vmax var(--accent);
+  clip-path: inset(0 -100vmax);
+}
+.opening {
+  display: grid;
+  gap: var(--space-5);
+  margin-block-end: var(--space-7);
+}
+.label {
+  margin: 0;
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.label span {
+  margin-inline-end: var(--space-3);
+}
+.opening h2 {
+  margin: 0;
+  font-family: var(--font-editorial), Georgia, serif;
+  font-size: clamp(2.8rem, 5.5vw, 5.25rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.introduction {
+  max-width: 45ch;
+  margin: 0;
+  line-height: 1.55;
+}
+.composition {
+  display: grid;
+  gap: var(--space-6);
+  align-items: start;
+}
+.scene {
+  margin: 0;
+  min-width: 0;
+}
+.scene > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
+  object-position: 50% 65%;
+}
+.scene figcaption {
+  max-width: 45ch;
+  margin-block-start: var(--space-4);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+.index {
+  min-width: 0;
+  background: var(--background);
+  color: var(--foreground);
+  padding: var(--space-5);
+}
+.record + .record {
+  margin-block-start: var(--space-5);
+  padding-block-start: var(--space-5);
+  border-block-start: 1px solid var(--credential-rule);
+}
+.issuer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+.number {
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+.issuer h3 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.logo {
+  width: 1.75rem;
+  height: 2rem;
+  object-fit: contain;
+}
+.logo[data-issuer="epam"] {
+  width: 3.5rem;
+}
+.documents {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0;
+}
+.documents li + li {
+  margin-block-start: var(--space-2);
+}
+.documents a {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  align-items: center;
+  min-height: 44px;
+  padding-block: var(--space-2);
+  font-family: var(--font-editorial), Georgia, serif;
+  font-size: clamp(1.5rem, 2.1vw, 1.875rem);
+  line-height: 1.18;
+  text-decoration: none;
+}
+.documents a:hover > span[lang] {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+.arrow {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-family: var(--font-body), sans-serif;
+  font-size: 1.3rem;
+  transition: transform var(--motion-fast) ease;
+}
+.documents a:hover .arrow,
+.documents a:focus-visible .arrow {
+  transform: translate(2px, -2px);
+}
+.groupNote {
+  margin: var(--space-3) 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (min-width: 48rem) {
+  .section {
+    padding-block-start: var(--space-9);
+  }
+  .opening {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+  .label {
+    grid-column: 1 / -1;
+  }
+  .introduction {
+    align-self: end;
+  }
+  .scene > img {
+    aspect-ratio: 16 / 9;
+    object-position: 50% 60%;
+  }
+  .index {
+    padding: var(--space-7);
+  }
+}
+@media (min-width: 64rem) {
+  .opening {
+    grid-template-columns: 1.15fr 1fr;
+    column-gap: var(--space-8);
+    margin-block-end: var(--space-8);
+  }
+  .composition {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: 0;
+  }
+  .scene {
+    padding-block-start: var(--space-7);
+  }
+  .scene > img {
+    aspect-ratio: 4 / 5;
+    object-position: center;
+  }
+  .scene figcaption {
+    padding-inline-end: var(--space-6);
+  }
+  .index {
+    border-block-start: 0.375rem solid var(--border);
+  }
+}

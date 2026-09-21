@@ -236,6 +236,13 @@ export const es = {
         "Formación completada en interfaces adaptables, desarrollo backend y bases de datos relacionales, con tres proyectos individuales.",
     },
   },
+  credentialIndex: {
+    headline: "Aprendizaje con respaldo.",
+    introduction:
+      "Credenciales individuales que acompañan una formación técnica continua. Cada enlace lleva a su certificado.",
+    imageCaption:
+      "Imagen editorial conceptual. Los documentos representados no son mis certificados reales.",
+  },
   additional: {
     evolution:
       "Mi recorrido desde el desarrollo web, pasando por la automatización de pruebas, hasta la ingeniería de datos aporta una mirada centrada en la validación, la fiabilidad y la calidad del software a mi trabajo actual.",

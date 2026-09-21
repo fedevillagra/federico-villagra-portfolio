@@ -233,6 +233,13 @@ export const en = {
         "Completed training in responsive interfaces, backend development and relational databases, including three individual projects.",
     },
   },
+  credentialIndex: {
+    headline: "Learning, documented.",
+    introduction:
+      "Individual credentials, connected by a continuing technical education. Each entry links to its certificate.",
+    imageCaption:
+      "Conceptual editorial image. The documents shown are not my actual certificates.",
+  },
   additional: {
     evolution:
       "My path from web development through test automation to data engineering brings a focus on validation, reliability and software quality to my current work.",
