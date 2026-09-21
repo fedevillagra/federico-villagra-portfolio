@@ -127,6 +127,33 @@ export const en = {
       ],
     },
   },
+  knowledge: {
+    dataUses: {
+      java: "ETL components",
+      python: "ETL development",
+      oracle: "Persistence & SQL",
+      kafka: "Component integration",
+    },
+    label: "Knowledge",
+    headline: "Tools, with context.",
+    introduction:
+      "A technical index shaped by data engineering, software testing and web development — with a separate place for ongoing learning.",
+    imageCaption:
+      "Conceptual illustration of a software and engineering workspace.",
+    current: "Current professional practice",
+    previous: "Previous professional experience",
+    coursework: "Coursework & educational projects",
+    dataTitle: "Data engineering & pipelines",
+    testingTitle: "Quality & automation",
+    webTitle: "Web development",
+    foundationsTitle: "Infrastructure & engineering foundations",
+    testingNote:
+      "Java-based automation in the INDUMIX product environment and the EPAM internship. Cucumber was part of the internship.",
+    trainingNote:
+      "Web development coursework and projects, separate from my professional work with WordPress and PHP.",
+    foundationsNote:
+      "University work in C++, alongside algorithms, data structures, software architecture, concurrency and operating systems.",
+  },
   skills: {
     data: {
       title: "Data pipelines and integration",
@@ -139,7 +166,7 @@ export const en = {
     testing: {
       title: "Previous experience in test automation",
       description:
-        "UI testing, regression checks and maintainable test suites.",
+        "Functional UI testing, regression checks and maintainable test suites.",
     },
     web: {
       title: "Previous experience in web development",

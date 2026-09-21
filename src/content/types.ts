@@ -70,6 +70,23 @@ export type PortfolioContent = {
       responsibilities: readonly string[];
     }
   >;
+  knowledge: {
+    dataUses: Record<"java" | "python" | "oracle" | "kafka", string>;
+    label: string;
+    headline: string;
+    introduction: string;
+    imageCaption: string;
+    current: string;
+    previous: string;
+    coursework: string;
+    dataTitle: string;
+    testingTitle: string;
+    webTitle: string;
+    foundationsTitle: string;
+    testingNote: string;
+    trainingNote: string;
+    foundationsNote: string;
+  };
   skills: Record<SkillGroupId, { title: string; description: string }>;
   education: Record<EducationId, { title: string; description: string }>;
   additional: { evolution: string; collaboration: string };

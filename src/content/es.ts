@@ -128,6 +128,33 @@ export const es = {
       ],
     },
   },
+  knowledge: {
+    dataUses: {
+      java: "Componentes ETL",
+      python: "Desarrollo ETL",
+      oracle: "Persistencia y SQL",
+      kafka: "Integración de componentes",
+    },
+    label: "Conocimientos",
+    headline: "Herramientas con contexto.",
+    introduction:
+      "Un índice técnico construido desde la ingeniería de datos, las pruebas de software y el desarrollo web, con un espacio propio para la formación.",
+    imageCaption:
+      "Ilustración conceptual de un espacio de trabajo de software e ingeniería.",
+    current: "Uso profesional actual",
+    previous: "Experiencia profesional previa",
+    coursework: "Formación y proyectos educativos",
+    dataTitle: "Ingeniería de datos y pipelines",
+    testingTitle: "Calidad y automatización",
+    webTitle: "Desarrollo web",
+    foundationsTitle: "Infraestructura y fundamentos de ingeniería",
+    testingNote:
+      "Automatización con Java en el entorno de producto INDUMIX y en la pasantía de EPAM. Cucumber formó parte de la pasantía.",
+    trainingNote:
+      "Formación y proyectos de desarrollo web, diferenciados del trabajo profesional con WordPress y PHP.",
+    foundationsNote:
+      "Trabajo universitario en C++, junto con algoritmos, estructuras de datos, arquitectura de software, concurrencia y sistemas operativos.",
+  },
   skills: {
     data: {
       title: "Pipelines e integración de datos",
@@ -140,7 +167,8 @@ export const es = {
     },
     testing: {
       title: "Experiencia previa en automatización de pruebas",
-      description: "Pruebas de interfaz, regresión y suites mantenibles.",
+      description:
+        "Pruebas funcionales de interfaz, regresión y suites mantenibles.",
     },
     web: {
       title: "Experiencia previa en desarrollo web",

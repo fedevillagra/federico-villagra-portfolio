@@ -6,23 +6,13 @@ import {
   organizations,
   type Period,
   profile,
-  type SkillGroupId,
-  skillGroups,
-  type TechnologyId,
-  technologies,
 } from "@/content/facts";
 import type { Locale } from "@/i18n/locales";
 import { CurrentWork } from "./current-work";
 import { Experience } from "./experience";
 import { Hero } from "./hero";
+import { Knowledge } from "./knowledge";
 import { SiteHeader } from "./site-header";
-
-function technologyList(ids: readonly TechnologyId[], locale: Locale) {
-  return new Intl.ListFormat(locale, {
-    style: "long",
-    type: "conjunction",
-  }).format(ids.map((id) => technologies[id]));
-}
 
 function PeriodText({ period, locale }: { period: Period; locale: Locale }) {
   const format = (value: string) =>
@@ -58,16 +48,7 @@ export function Portfolio({ locale }: { locale: Locale }) {
 
         <Experience locale={locale} />
 
-        <section id="skills" aria-labelledby="skills-heading">
-          <h2 id="skills-heading">{copy.headings.skills}</h2>
-          {(Object.keys(skillGroups) as SkillGroupId[]).map((id) => (
-            <article key={id} aria-labelledby={`skills-${id}`}>
-              <h3 id={`skills-${id}`}>{copy.skills[id].title}</h3>
-              <p>{copy.skills[id].description}</p>
-              <p>{technologyList(skillGroups[id], locale)}.</p>
-            </article>
-          ))}
-        </section>
+        <Knowledge locale={locale} />
 
         <section id="education" aria-labelledby="education-heading">
           <h2 id="education-heading">{copy.headings.education}</h2>
