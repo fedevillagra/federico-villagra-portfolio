@@ -88,6 +88,14 @@ export type PortfolioContent = {
     foundationsNote: string;
   };
   skills: Record<SkillGroupId, { title: string; description: string }>;
+  learningMap: {
+    label: string;
+    headline: string;
+    complementary: string;
+    complementaryNote: string;
+    foundations: readonly { title: string; description: string }[];
+    emphasis: Record<Exclude<EducationId, "university">, string>;
+  };
   education: Record<EducationId, { title: string; description: string }>;
   additional: { evolution: string; collaboration: string };
 };

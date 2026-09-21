@@ -1,40 +1,13 @@
 import { content } from "@/content";
 import { certifications } from "@/content/certifications";
-import {
-  type EducationId,
-  education,
-  organizations,
-  type Period,
-  profile,
-} from "@/content/facts";
+import { organizations, profile } from "@/content/facts";
 import type { Locale } from "@/i18n/locales";
 import { CurrentWork } from "./current-work";
+import { Education } from "./education";
 import { Experience } from "./experience";
 import { Hero } from "./hero";
 import { Knowledge } from "./knowledge";
 import { SiteHeader } from "./site-header";
-
-function PeriodText({ period, locale }: { period: Period; locale: Locale }) {
-  const format = (value: string) =>
-    value.length === 4
-      ? value
-      : new Intl.DateTimeFormat(locale, {
-          month: "long",
-          year: "numeric",
-          timeZone: "UTC",
-        }).format(new Date(`${value}-01T00:00:00Z`));
-  return (
-    <p>
-      <time dateTime={period.start}>{format(period.start)}</time>
-      {" – "}
-      {period.end ? (
-        <time dateTime={period.end}>{format(period.end)}</time>
-      ) : (
-        content[locale].labels.present
-      )}
-    </p>
-  );
-}
 
 export function Portfolio({ locale }: { locale: Locale }) {
   const copy = content[locale];
@@ -50,28 +23,7 @@ export function Portfolio({ locale }: { locale: Locale }) {
 
         <Knowledge locale={locale} />
 
-        <section id="education" aria-labelledby="education-heading">
-          <h2 id="education-heading">{copy.headings.education}</h2>
-          {(Object.keys(education) as EducationId[]).map((id) => {
-            const fact = education[id];
-            const text = copy.education[id];
-            return (
-              <article key={id} aria-labelledby={`education-${id}`}>
-                <h3 id={`education-${id}`}>{text.title}</h3>
-                <p>{organizations[fact.organization]}</p>
-                {fact.status !== "unspecified" && (
-                  <p>
-                    <strong>{copy.labels[fact.status]}</strong>
-                  </p>
-                )}
-                {fact.period && (
-                  <PeriodText period={fact.period} locale={locale} />
-                )}
-                <p>{text.description}</p>
-              </article>
-            );
-          })}
-        </section>
+        <Education locale={locale} />
 
         <section id="certifications" aria-labelledby="certifications-heading">
           <h2 id="certifications-heading">{copy.headings.certifications}</h2>

@@ -186,6 +186,34 @@ export const es = {
         "Tecnologías estudiadas o utilizadas en proyectos educativos, diferenciadas de la experiencia productiva.",
     },
   },
+  learningMap: {
+    label: "Educación",
+    headline: "Las bases detrás de la práctica.",
+    complementary: "Formación complementaria",
+    complementaryNote:
+      "Programas específicos de entrega de software, desarrollo web y proyectos prácticos.",
+    foundations: [
+      {
+        title: "Software",
+        description:
+          "Arquitectura y patrones de diseño. Algoritmos y estructuras de datos como base del desarrollo.",
+      },
+      {
+        title: "Sistemas",
+        description:
+          "Concurrencia y sistemas operativos: estudiar cómo se ejecuta el software y cómo coordina su trabajo.",
+      },
+      {
+        title: "Práctica",
+        description: `Proyectos de hardware y software en equipo, utilizando ${tech.cpp} y ${tech.java} en el trabajo de software.`,
+      },
+    ],
+    emphasis: {
+      devops: "Entregas · Infraestructura · Operación",
+      coderhouse: `${tech.javascript} / ${tech.react} / Backend`,
+      utn: `Frontend / ${tech.php} / ${tech.mysql}`,
+    },
+  },
   education: {
     university: {
       title: "Ingeniería en Computación",

@@ -39,6 +39,8 @@ No copiar layouts, marcas, textos, paletas completas, tipografías combinadas ex
 - Antes de cada integración comprobar propósito informativo o decorativo, sección, proporción, crop y punto focal en desktop/mobile, peso, dimensiones y tamaños responsive. No incrustar información profesional imprescindible en la imagen.
 - Utilizar formatos optimizados y next/image, reservar dimensiones y cargar con prioridad solo lo necesario. Localizar el alt informativo; usar alt vacío en imágenes puramente decorativas.
 
+`portrait-02.webp` queda reservado como candidato fuerte para una futura sección personal, About o cierre, donde aporte presencia humana. No integrarlo en Education.
+
 ## Motion e interacción
 
 Microinteracciones y transiciones breves, elegantes y funcionales: foco, underline, color o desplazamientos discretos. Nada debe retrasar la lectura ni necesitar animación para entenderse. Respetar prefers-reduced-motion y ofrecer todos los recorridos por teclado.

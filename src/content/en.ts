@@ -183,6 +183,34 @@ export const en = {
         "Technologies studied or used in educational projects, separate from production experience.",
     },
   },
+  learningMap: {
+    label: "Education",
+    headline: "The foundations behind the work.",
+    complementary: "Complementary learning",
+    complementaryNote:
+      "Focused programs in delivery, web development and practical software projects.",
+    foundations: [
+      {
+        title: "Software",
+        description:
+          "Architecture and design patterns. Algorithms and data structures as a foundation for software development.",
+      },
+      {
+        title: "Systems",
+        description:
+          "Concurrency and operating systems: studying how software runs and coordinates its work.",
+      },
+      {
+        title: "Practice",
+        description: `Team hardware and software projects, using ${tech.cpp} and ${tech.java} in software work.`,
+      },
+    ],
+    emphasis: {
+      devops: "Delivery · Infrastructure · Operations",
+      coderhouse: `${tech.javascript} / ${tech.react} / Backend`,
+      utn: `Frontend / ${tech.php} / ${tech.mysql}`,
+    },
+  },
   education: {
     university: {
       title: "Computer Engineering",
