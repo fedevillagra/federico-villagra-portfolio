@@ -71,6 +71,19 @@ Inspección visual de los archivos locales (20/09/2026): cuatro retratos, cinco 
 
 Los cinco PNG pesan aproximadamente 1,75–2,17 MB cada uno; requieren copias optimizadas y tamaños responsive antes de producción. Los retratos van de 0,37 a 1,07 MB. Preservar originales y no servir estos pesos indiscriminadamente. No superponer texto esencial sobre áreas densas; las etiquetas de pipelines deben existir en HTML fuera de las imágenes.
 
+### Fotografías de contexto real — incorporación del 21/09/2026
+
+Assets proporcionados por Federico. La relación con INDUMIX/EPAM proviene de su aclaración; no se infieren responsabilidades, ubicación ni información profesional a partir de pantallas, etiquetas o carteles.
+
+| Archivo en `docs/visual-references/` | Orientación / dimensiones | Contenido visible y posible uso | Prioridad / función | Crop y responsive |
+| --- | --- | --- | --- | --- |
+| `indumix-industrial-control.webp` | Horizontal 16:9, 1360×765; 199 KB | Tablero abierto con componentes eléctricos y cableado; contexto industrial del producto en el registro QA de INDUMIX. | supporting / informativa de contexto | Integrado a una columna, máximo 448 px, manteniendo el encuadre completo. En mobile conserva 16:9 sin una altura excesiva. Caption factual: hardware del entorno de producto, sin atribuir diseño, fabricación o programación al autor. |
+| `indumix-concrete-mixer.webp` | Horizontal 16:9, 2560×1440; 359 KB | Camión hormigonero con marca INDUMIX en un entorno exterior; posible contexto de producto, case study o transición futura. | optional / informativa de contexto | No integrado ahora. Preservar camión y entorno si se utiliza; no convertirlo en evidencia de tareas realizadas por Federico. |
+| `epam-office.jpeg` | Vertical ≈9:16, 899×1599; 129 KB | Espacio de oficina con mesas, sillas y elementos verdes en columnas/techo; posible contexto laboral o About. | optional / contextual | No integrado. Mucho entorno vertical; evaluar un crop moderado sin perder la lectura del espacio. No extraer hechos de pantallas o carteles. |
+| `epam-office-mate.jpeg` | Vertical ≈9:16, 899×1599; 99 KB | Mano sosteniendo un mate delante de un portátil; posible About, cierre o sección personal. | supporting / humana y contextual | No integrado. Preservar mate y mano como foco; el portátil queda como entorno. No utilizar el texto de la pantalla como contenido factual. |
+
+El tablero se conserva sin filtros, desenfoque, overlays ni alteraciones del hardware. La copia de producción es idéntica al original; next/image entrega tamaños optimizados. Su escala debe seguir siendo secundaria respecto del rol actual. Los otros tres assets permanecen únicamente como referencias.
+
 ### Assets de instituciones
 
 La ubicación prevista `docs/visual-references/logos/` ya contiene los siguientes archivos. Se inspeccionaron los raster y el render de los SVG; no se descargó ni generó ningún logo. Esta inspección describe su apariencia, no certifica su procedencia oficial o vigencia de marca.

@@ -55,6 +55,13 @@ export type PortfolioContent = {
     responsibilitiesLabel: string;
     responsibilities: readonly { title: string; description: string }[];
   };
+  experienceArchive: {
+    industrialImage: { alt: string; caption: string };
+    label: string;
+    note: string;
+    current: string;
+    imageCaption: string;
+  };
   experiences: Record<
     ExperienceId,
     {

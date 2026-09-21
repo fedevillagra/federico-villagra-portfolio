@@ -2,9 +2,7 @@ import { content } from "@/content";
 import { certifications } from "@/content/certifications";
 import {
   type EducationId,
-  type ExperienceId,
   education,
-  experiences,
   organizations,
   type Period,
   profile,
@@ -15,6 +13,7 @@ import {
 } from "@/content/facts";
 import type { Locale } from "@/i18n/locales";
 import { CurrentWork } from "./current-work";
+import { Experience } from "./experience";
 import { Hero } from "./hero";
 import { SiteHeader } from "./site-header";
 
@@ -57,54 +56,7 @@ export function Portfolio({ locale }: { locale: Locale }) {
 
         <CurrentWork locale={locale} />
 
-        <section id="experience" aria-labelledby="experience-heading">
-          <h2 id="experience-heading">{copy.headings.experience}</h2>
-          {(Object.keys(experiences) as ExperienceId[]).map((id) => {
-            const fact = experiences[id];
-            const text = copy.experiences[id];
-            return (
-              <article key={id} aria-labelledby={`experience-${id}`}>
-                <h3
-                  id={`experience-${id}`}
-                  lang={id === "data" || id === "automation" ? "en" : undefined}
-                >
-                  {text.role}
-                </h3>
-                <dl>
-                  {fact.employer && (
-                    <>
-                      <dt>{copy.labels.employer}</dt>
-                      <dd>{organizations[fact.employer]}</dd>
-                    </>
-                  )}
-                  {fact.project && (
-                    <>
-                      <dt>{copy.labels.project}</dt>
-                      <dd>{organizations[fact.project]}</dd>
-                    </>
-                  )}
-                </dl>
-                <PeriodText period={fact.period} locale={locale} />
-                <p>{text.summary}</p>
-                <ul>
-                  {text.responsibilities.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <p>
-                  <strong>{copy.labels.technologies}:</strong>{" "}
-                  {technologyList(fact.technologies, locale)}.
-                </p>
-                {fact.contextTechnologies.length > 0 && (
-                  <p>
-                    <strong>{copy.labels.context}:</strong>{" "}
-                    {technologyList(fact.contextTechnologies, locale)}.
-                  </p>
-                )}
-              </article>
-            );
-          })}
-        </section>
+        <Experience locale={locale} />
 
         <section id="skills" aria-labelledby="skills-heading">
           <h2 id="skills-heading">{copy.headings.skills}</h2>

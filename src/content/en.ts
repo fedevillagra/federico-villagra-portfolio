@@ -77,6 +77,17 @@ export const en = {
       },
     ],
   },
+  experienceArchive: {
+    industrialImage: {
+      alt: "Open industrial control cabinet with electrical components and wiring.",
+      caption: `Industrial control hardware from the ${org.indumix} product environment.`,
+    },
+    label: "Experience",
+    note: "Web development, test automation and data engineering. Different responsibilities, connected by software quality.",
+    current: "Current role",
+    imageCaption:
+      "Conceptual illustration of software, data and telecommunications infrastructure.",
+  },
   experiences: {
     data: {
       role: profile.currentRole,

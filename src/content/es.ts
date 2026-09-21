@@ -78,6 +78,17 @@ export const es = {
       },
     ],
   },
+  experienceArchive: {
+    industrialImage: {
+      alt: "Tablero de control industrial abierto, con componentes eléctricos y cableado.",
+      caption: `Hardware de control industrial del entorno de producto ${org.indumix}.`,
+    },
+    label: "Experiencia",
+    note: "Desarrollo web, automatización de pruebas e ingeniería de datos. Distintas responsabilidades, conectadas por la calidad del software.",
+    current: "Rol actual",
+    imageCaption:
+      "Ilustración conceptual de infraestructura de software, datos y telecomunicaciones.",
+  },
   experiences: {
     data: {
       role: profile.currentRole,
