@@ -41,14 +41,41 @@ export const es = {
     englishDescription: "Intermedio alto",
   },
   currentWork: {
+    label: "Trabajo actual",
+    headline: "Datos que tienen que funcionar",
+    headlineEnd: "en producción.",
     introduction:
-      "Trabajo sobre pipelines ETL productivos que integran datos de proveedores y plataformas de red de telecomunicaciones, desde la extracción y transformación hasta la persistencia y el consumo analítico.",
+      "Desarrollo y mantengo pipelines ETL productivos para datos de telecomunicaciones, desde la integración de fuentes hasta el soporte de los procesos que los mantienen en funcionamiento.",
+    imageCaption:
+      "Una ilustración de integración de datos y telecomunicaciones.",
+    pipelineLabel: "El flujo sobre el que trabajo",
+    pipelineNote: "Una vista simplificada de las etapas de procesamiento.",
+    stages: {
+      Extractor: "Ingesta de datos de proveedores y plataformas de red.",
+      Parser: "Análisis, validación y transformación de los datos recibidos.",
+      Loader: `Persistencia en ${tech.oracle} para su consumo analítico.`,
+    },
+    responsibilitiesLabel: "De la implementación a la operación",
     responsibilities: [
-      `Desarrollo y mantengo componentes Extractor, Parser y Loader con ${tech.java} y ${tech.python}.`,
-      `Desarrollo y optimizo packages, procedures y functions en ${tech.oracle}, y utilizo ${tech.kafka} para la comunicación entre componentes.`,
-      "Integro nuevas fuentes de datos, equipos, contadores y KPIs a flujos existentes.",
-      "Investigo incidentes productivos mediante SQL y logs, sigo los datos de extremo a extremo y ejecuto recuperaciones y reprocesamientos históricos.",
-      "Desarrollo controles automáticos de detección y recuperación ante fallas, y valido la calidad de datos después de las implementaciones.",
+      {
+        title: "Integración de fuentes",
+        description:
+          "Integro nuevas fuentes, equipos, contadores y KPIs a flujos de datos existentes.",
+      },
+      {
+        title: "Procesamiento y persistencia",
+        description: `Desarrollo y mantengo componentes en ${tech.java} y ${tech.python}, optimizo packages, procedures y functions en ${tech.oracle} y conecto componentes mediante ${tech.kafka}.`,
+      },
+      {
+        title: "Soporte productivo",
+        description:
+          "Investigo incidentes mediante SQL y logs, y ejecuto backfills y reprocesamientos históricos para recuperar datos.",
+      },
+      {
+        title: "Calidad de datos",
+        description:
+          "Desarrollo controles automáticos de detección y recuperación ante fallas, y valido la calidad de datos después de las implementaciones.",
+      },
     ],
   },
   experiences: {

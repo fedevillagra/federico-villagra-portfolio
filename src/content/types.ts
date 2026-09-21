@@ -1,4 +1,9 @@
-import type { EducationId, ExperienceId, SkillGroupId } from "./facts";
+import type {
+  EducationId,
+  ExperienceId,
+  pipelineStages,
+  SkillGroupId,
+} from "./facts";
 
 export const sectionIds = [
   "current-work",
@@ -38,7 +43,18 @@ export type PortfolioContent = {
     english: string;
     englishDescription: string;
   };
-  currentWork: { introduction: string; responsibilities: readonly string[] };
+  currentWork: {
+    label: string;
+    headline: string;
+    headlineEnd: string;
+    introduction: string;
+    imageCaption: string;
+    pipelineLabel: string;
+    pipelineNote: string;
+    stages: Record<(typeof pipelineStages)[number], string>;
+    responsibilitiesLabel: string;
+    responsibilities: readonly { title: string; description: string }[];
+  };
   experiences: Record<
     ExperienceId,
     {

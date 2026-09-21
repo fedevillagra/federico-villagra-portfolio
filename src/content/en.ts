@@ -41,14 +41,40 @@ export const en = {
     englishDescription: "Upper-intermediate",
   },
   currentWork: {
+    label: "Current work",
+    headline: "Data that has to work",
+    headlineEnd: "in production.",
     introduction:
-      "I work on production ETL pipelines that integrate data from telecommunications providers and network platforms, from extraction and transformation to persistence and analytical use.",
+      "I develop and maintain production ETL pipelines for telecommunications data, from integrating sources to supporting the processes that keep them running.",
+    imageCaption: "An illustration of data integration and telecommunications.",
+    pipelineLabel: "The flow I work on",
+    pipelineNote: "A simplified view of the processing stages.",
+    stages: {
+      Extractor: "Ingest data from providers and network platforms.",
+      Parser: "Analyze, validate and transform incoming data.",
+      Loader: `Persist data in ${tech.oracle} for analytical use.`,
+    },
+    responsibilitiesLabel: "From implementation to operation",
     responsibilities: [
-      `Develop and maintain Extractor, Parser and Loader components using ${tech.java} and ${tech.python}.`,
-      `Develop and optimize packages, procedures and functions in ${tech.oracle}, and use ${tech.kafka} for communication between components.`,
-      "Integrate new data sources, equipment, counters and KPIs into existing flows.",
-      "Investigate production incidents through SQL and logs, trace data end to end, and run backfills and historical reprocessing.",
-      "Build automated failure detection and recovery controls, and validate data quality after deployments.",
+      {
+        title: "Source integration",
+        description:
+          "Integrate new sources, equipment, counters and KPIs into existing data flows.",
+      },
+      {
+        title: "Processing & persistence",
+        description: `Develop and maintain components in ${tech.java} and ${tech.python}, optimize ${tech.oracle} packages, procedures and functions, and connect components through ${tech.kafka}.`,
+      },
+      {
+        title: "Production support",
+        description:
+          "Trace incidents through SQL and logs, and run backfills and historical reprocessing to recover data.",
+      },
+      {
+        title: "Data quality",
+        description:
+          "Build automated failure detection and recovery controls, and validate data quality after deployments.",
+      },
     ],
   },
   experiences: {

@@ -170,3 +170,5 @@ export const education = {
   },
 } as const satisfies Record<string, EducationFact>;
 export type EducationId = keyof typeof education;
+
+export const pipelineStages = ["Extractor", "Parser", "Loader"] as const;

@@ -14,6 +14,7 @@ import {
   technologies,
 } from "@/content/facts";
 import type { Locale } from "@/i18n/locales";
+import { CurrentWork } from "./current-work";
 import { Hero } from "./hero";
 import { SiteHeader } from "./site-header";
 
@@ -54,15 +55,7 @@ export function Portfolio({ locale }: { locale: Locale }) {
       <main id="main-content" className="page-width" tabIndex={-1}>
         <Hero locale={locale} />
 
-        <section id="current-work" aria-labelledby="current-work-heading">
-          <h2 id="current-work-heading">{copy.headings["current-work"]}</h2>
-          <p>{copy.currentWork.introduction}</p>
-          <ul>
-            {copy.currentWork.responsibilities.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </section>
+        <CurrentWork locale={locale} />
 
         <section id="experience" aria-labelledby="experience-heading">
           <h2 id="experience-heading">{copy.headings.experience}</h2>
