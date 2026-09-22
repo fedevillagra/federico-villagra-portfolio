@@ -82,7 +82,8 @@ a {
   text-underline-offset: 0.22em;
 }
 a:focus-visible,
-main:focus-visible {
+main:focus-visible,
+.site-header:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 5px;
   border-radius: var(--radius-small);
@@ -107,7 +108,8 @@ main > section {
   padding-block-start: var(--space-6);
   border-block-start: 1px solid var(--border);
 }
-main > section:last-child {
+/* Preserve the approved About spacing when later sections follow it. */
+main > #about {
   padding-block-end: var(--space-8);
 }
 article + article {
@@ -196,7 +198,7 @@ article + article {
   color: var(--accent-foreground);
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 75rem) {
   .site-header {
     grid-template-columns: 1fr auto auto;
     column-gap: var(--space-7);

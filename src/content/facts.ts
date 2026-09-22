@@ -6,6 +6,14 @@ export const profile = {
   siteUrl: "https://federicovillagra.com",
 } as const;
 
+// Contact details confirmed by Federico; shared by presentation and future SEO.
+export const contactDetails = {
+  email: "fedevillagra8@gmail.com",
+  linkedin: "https://linkedin.com/in/federicovillagra",
+  github: "https://github.com/fedevillagra",
+  cv: "https://drive.google.com/file/d/1DPItFyskfTAmGp2W0qXSzkBWPYI7101O/view?usp=sharing",
+} as const;
+
 export const organizations = {
   openai: "OpenAI",
   epam: "EPAM Systems",

@@ -12,6 +12,7 @@ export const sectionIds = [
   "education",
   "certifications",
   "about",
+  "contact",
 ] as const;
 export type SectionId = (typeof sectionIds)[number];
 
@@ -48,7 +49,6 @@ export type PortfolioContent = {
     headline: string;
     headlineEnd: string;
     introduction: string;
-    imageCaption: string;
     pipelineLabel: string;
     pipelineNote: string;
     stages: Record<(typeof pipelineStages)[number], string>;
@@ -60,7 +60,6 @@ export type PortfolioContent = {
     label: string;
     note: string;
     current: string;
-    imageCaption: string;
   };
   experiences: Record<
     ExperienceId,
@@ -75,7 +74,6 @@ export type PortfolioContent = {
     label: string;
     headline: string;
     introduction: string;
-    imageCaption: string;
     current: string;
     previous: string;
     coursework: string;
@@ -100,7 +98,12 @@ export type PortfolioContent = {
   credentialIndex: {
     headline: string;
     introduction: string;
-    imageCaption: string;
+  };
+  contact: {
+    headline: string;
+    introduction: string;
+    cv: string;
+    backToTop: string;
   };
   about: {
     headline: string;

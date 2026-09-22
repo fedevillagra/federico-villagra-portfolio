@@ -135,21 +135,20 @@ export function Experience({ locale }: { locale: Locale }) {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+                {id === "data" && (
+                  <div className={styles.image}>
+                    <Image
+                      src="/images/experience-telecom-infrastructure.png"
+                      width={1672}
+                      height={941}
+                      alt=""
+                      loading="lazy"
+                      quality={75}
+                      sizes="(min-width: 1305px) 404px, (min-width: 1024px) 30vw, (min-width: 768px) calc(92vw - 192px), (min-width: 600px) 92vw, calc(100vw - 48px)"
+                    />
+                  </div>
+                )}
               </div>
-              {id === "data" && (
-                <figure className={styles.image}>
-                  <Image
-                    src="/images/experience-telecom-infrastructure.png"
-                    width={1672}
-                    height={941}
-                    alt=""
-                    loading="lazy"
-                    quality={75}
-                    sizes="(min-width: 1305px) 1200px, (min-width: 600px) 92vw, calc(100vw - 48px)"
-                  />
-                  <figcaption>{archive.imageCaption}</figcaption>
-                </figure>
-              )}
               <div className={styles.technical}>
                 <p>
                   <span className={styles.metaLabel}>

@@ -19,6 +19,7 @@ export const es = {
     education: "Formación",
     certifications: "Certificaciones",
     about: "Sobre mí",
+    contact: "Contacto",
   },
   labels: {
     language: "Idioma",
@@ -46,8 +47,6 @@ export const es = {
     headlineEnd: "en producción.",
     introduction:
       "Desarrollo y mantengo pipelines ETL productivos para datos de telecomunicaciones, desde la integración de fuentes hasta el soporte de los procesos que los mantienen en funcionamiento.",
-    imageCaption:
-      "Una ilustración de integración de datos y telecomunicaciones.",
     pipelineLabel: "El flujo sobre el que trabajo",
     pipelineNote: "Una vista simplificada de las etapas de procesamiento.",
     stages: {
@@ -86,8 +85,6 @@ export const es = {
     label: "Experiencia",
     note: "Desarrollo web, automatización de pruebas e ingeniería de datos. Distintas responsabilidades, conectadas por la calidad del software.",
     current: "Rol actual",
-    imageCaption:
-      "Ilustración conceptual de infraestructura de software, datos y telecomunicaciones.",
   },
   experiences: {
     data: {
@@ -139,8 +136,6 @@ export const es = {
     headline: "Herramientas con contexto.",
     introduction:
       "Un índice técnico construido desde la ingeniería de datos, las pruebas de software y el desarrollo web, con un espacio propio para la formación.",
-    imageCaption:
-      "Ilustración conceptual de un espacio de trabajo de software e ingeniería.",
     current: "Uso profesional actual",
     previous: "Experiencia profesional previa",
     coursework: "Formación y proyectos educativos",
@@ -240,8 +235,13 @@ export const es = {
     headline: "Aprendizaje con respaldo.",
     introduction:
       "Credenciales individuales que acompañan una formación técnica continua. Cada enlace lleva a su certificado.",
-    imageCaption:
-      "Imagen editorial conceptual. Los documentos representados no son mis certificados reales.",
+  },
+  contact: {
+    headline: "Empecemos con una charla.",
+    introduction:
+      "Me interesa conversar sobre ingeniería de datos, ingeniería de software, tecnología, oportunidades profesionales y colaboración.",
+    cv: "CV",
+    backToTop: "Volver arriba",
   },
   about: {
     headline: "Personas, lugares y tiempo compartido.",

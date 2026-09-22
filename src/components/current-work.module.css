@@ -83,12 +83,6 @@
   height: auto;
   aspect-ratio: 1672 / 941;
 }
-.image figcaption {
-  color: var(--work-muted);
-  font-size: 0.8125rem;
-  line-height: 1.4;
-  margin-block: var(--space-3) 0;
-}
 .pipeline {
   position: relative;
   background: var(--work-panel);

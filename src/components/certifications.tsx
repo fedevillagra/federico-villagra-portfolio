@@ -30,7 +30,7 @@ export function Certifications({ locale }: { locale: Locale }) {
         <p className={styles.introduction}>{index.introduction}</p>
       </header>
       <div className={styles.composition}>
-        <figure className={styles.scene}>
+        <div className={styles.scene}>
           <Image
             src="/images/certifications-editorial-workspace.png"
             width={1122}
@@ -40,8 +40,7 @@ export function Certifications({ locale }: { locale: Locale }) {
             quality={75}
             sizes="(min-width: 1305px) 552px, (min-width: 1024px) 42vw, (min-width: 768px) 92vw, calc(100vw - 48px)"
           />
-          <figcaption>{index.imageCaption}</figcaption>
-        </figure>
+        </div>
         <div className={styles.index}>
           {certifications.map((credential, position) => {
             const logo = issuerLogos[credential.issuer];

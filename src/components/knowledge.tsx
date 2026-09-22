@@ -52,18 +52,17 @@ export function Knowledge({ locale }: { locale: Locale }) {
             <p>{copy.skills.operations.description}</p>
           </div>
         </article>
-        <figure className={styles.image}>
+        <div className={styles.image}>
           <Image
-            src="/images/knowledge-engineering-workspace.png"
-            width={1536}
-            height={1024}
+            src="/images/knowledge-technical-systems.png"
+            width={1448}
+            height={1086}
             alt=""
             sizes="(min-width: 1305px) 552px, (min-width: 1024px) 42vw, (min-width: 768px) 92vw, calc(100vw - 48px)"
             loading="lazy"
             quality={75}
           />
-          <figcaption>{index.imageCaption}</figcaption>
-        </figure>
+        </div>
       </div>
       <div className={styles.previous}>
         <article className={styles.group} aria-labelledby="knowledge-testing">

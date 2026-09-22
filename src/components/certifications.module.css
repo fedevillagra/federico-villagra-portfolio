@@ -54,12 +54,6 @@
   object-fit: cover;
   object-position: 50% 65%;
 }
-.scene figcaption {
-  max-width: 45ch;
-  margin-block-start: var(--space-4);
-  font-size: 0.8125rem;
-  line-height: 1.5;
-}
 .index {
   min-width: 0;
   background: var(--background);
@@ -185,9 +179,6 @@
   .scene > img {
     aspect-ratio: 4 / 5;
     object-position: center;
-  }
-  .scene figcaption {
-    padding-inline-end: var(--space-6);
   }
   .index {
     border-block-start: 0.375rem solid var(--border);

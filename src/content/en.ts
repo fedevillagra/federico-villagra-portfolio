@@ -19,6 +19,7 @@ export const en = {
     education: "Education",
     certifications: "Certifications",
     about: "About",
+    contact: "Contact",
   },
   labels: {
     language: "Language",
@@ -46,7 +47,6 @@ export const en = {
     headlineEnd: "in production.",
     introduction:
       "I develop and maintain production ETL pipelines for telecommunications data, from integrating sources to supporting the processes that keep them running.",
-    imageCaption: "An illustration of data integration and telecommunications.",
     pipelineLabel: "The flow I work on",
     pipelineNote: "A simplified view of the processing stages.",
     stages: {
@@ -85,8 +85,6 @@ export const en = {
     label: "Experience",
     note: "Web development, test automation and data engineering. Different responsibilities, connected by software quality.",
     current: "Current role",
-    imageCaption:
-      "Conceptual illustration of software, data and telecommunications infrastructure.",
   },
   experiences: {
     data: {
@@ -138,8 +136,6 @@ export const en = {
     headline: "Tools, with context.",
     introduction:
       "A technical index shaped by data engineering, software testing and web development — with a separate place for ongoing learning.",
-    imageCaption:
-      "Conceptual illustration of a software and engineering workspace.",
     current: "Current professional practice",
     previous: "Previous professional experience",
     coursework: "Coursework & educational projects",
@@ -237,8 +233,13 @@ export const en = {
     headline: "Learning, documented.",
     introduction:
       "Individual credentials, connected by a continuing technical education. Each entry links to its certificate.",
-    imageCaption:
-      "Conceptual editorial image. The documents shown are not my actual certificates.",
+  },
+  contact: {
+    headline: "We can start with a conversation.",
+    introduction:
+      "I welcome conversations about Data Engineering, Software Engineering, technology, professional opportunities and collaboration.",
+    cv: "Résumé / CV",
+    backToTop: "Back to top",
   },
   about: {
     headline: "People, places, and time together.",

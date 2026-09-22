@@ -1,6 +1,7 @@
 import type { Locale } from "@/i18n/locales";
 import { About } from "./about";
 import { Certifications } from "./certifications";
+import { Contact, SiteFooter } from "./contact";
 import { CurrentWork } from "./current-work";
 import { Education } from "./education";
 import { Experience } from "./experience";
@@ -26,7 +27,10 @@ export function Portfolio({ locale }: { locale: Locale }) {
         <Certifications locale={locale} />
 
         <About locale={locale} />
+
+        <Contact locale={locale} />
       </main>
+      <SiteFooter locale={locale} />
     </>
   );
 }

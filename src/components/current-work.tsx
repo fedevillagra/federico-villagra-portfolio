@@ -36,7 +36,7 @@ export function CurrentWork({ locale }: { locale: Locale }) {
       </header>
 
       <div className={styles.scene}>
-        <figure className={styles.image}>
+        <div className={styles.image}>
           <Image
             src="/images/data-engineering-workflow.png"
             width={1672}
@@ -46,8 +46,7 @@ export function CurrentWork({ locale }: { locale: Locale }) {
             quality={75}
             sizes="(min-width: 1305px) 896px, (min-width: 1024px) calc(92vw - 304px), (min-width: 768px) 92vw, 100vw"
           />
-          <figcaption>{work.imageCaption}</figcaption>
-        </figure>
+        </div>
         <div className={styles.context}>
           <dl className={styles.identity}>
             <div>

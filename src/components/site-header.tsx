@@ -6,13 +6,12 @@ import { type Locale, locales } from "@/i18n/locales";
 export function SiteHeader({ locale }: { locale: Locale }) {
   const copy = content[locale];
   return (
-    <header className="site-header page-width">
+    <header id="top" tabIndex={-1} className="site-header page-width">
       <a className="skip-link" href="#main-content">
         {copy.labels.skip}
       </a>
       <a className="site-identity" href={locales[locale].path}>
         {profile.name}
-        <span aria-hidden="true">.</span>
       </a>
       <nav className="primary-navigation" aria-label={copy.labels.navigation}>
         <ul>

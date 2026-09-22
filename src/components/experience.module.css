@@ -129,12 +129,6 @@
   object-fit: cover;
   object-position: center;
 }
-.image figcaption {
-  font-size: 0.8125rem;
-  color: var(--muted);
-  line-height: 1.4;
-  margin-block-start: var(--space-3);
-}
 .technical {
   margin-block-start: var(--space-5);
   font-size: 0.9375rem;
@@ -202,13 +196,6 @@
   .technical {
     grid-column: 2;
   }
-  .image {
-    grid-column: 1 / -1;
-  }
-  .image img {
-    aspect-ratio: 3 / 1;
-    object-position: 50% 52%;
-  }
   .record[data-role="data"] .year {
     font-size: 4rem;
   }
@@ -262,15 +249,6 @@
   }
   .role h3 {
     font-size: 2.125rem;
-  }
-  .image {
-    margin-block-start: var(--space-7);
-  }
-  .image img {
-    aspect-ratio: 4 / 1;
-  }
-  .image figcaption {
-    text-align: end;
   }
 }
 
