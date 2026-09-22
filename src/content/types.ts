@@ -11,7 +11,7 @@ export const sectionIds = [
   "skills",
   "education",
   "certifications",
-  "additional",
+  "about",
 ] as const;
 export type SectionId = (typeof sectionIds)[number];
 
@@ -102,5 +102,16 @@ export type PortfolioContent = {
     introduction: string;
     imageCaption: string;
   };
-  additional: { evolution: string; collaboration: string };
+  about: {
+    headline: string;
+    personal: string;
+    interests: readonly string[];
+    football: string;
+    workHeading: string;
+    collaboration: string;
+    agile: string;
+    englishPurpose: string;
+    portraitAlt: string;
+    mateAlt: string;
+  };
 };

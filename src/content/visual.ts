@@ -11,6 +11,7 @@ export const visualContent = {
       skills: "Knowledge",
       education: "Education",
       certifications: "Certifications",
+      about: "About",
     },
   },
   es: {
@@ -21,6 +22,7 @@ export const visualContent = {
       skills: "Conocimientos",
       education: "Formación",
       certifications: "Certificaciones",
+      about: "Sobre mí",
     },
   },
 } satisfies Record<
@@ -29,7 +31,7 @@ export const visualContent = {
     at: string;
     portraitAlt: string;
     navigation: Record<
-      "experience" | "skills" | "education" | "certifications",
+      "experience" | "skills" | "education" | "certifications" | "about",
       string
     >;
   }

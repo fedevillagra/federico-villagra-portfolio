@@ -18,7 +18,7 @@ export const en = {
     skills: "Technical knowledge",
     education: "Education",
     certifications: "Certifications",
-    additional: "Additional information",
+    about: "About",
   },
   labels: {
     language: "Language",
@@ -240,10 +240,21 @@ export const en = {
     imageCaption:
       "Conceptual editorial image. The documents shown are not my actual certificates.",
   },
-  additional: {
-    evolution:
-      "My path from web development through test automation to data engineering brings a focus on validation, reliability and software quality to my current work.",
+  about: {
+    headline: "People, places, and time together.",
+    personal:
+      "Outside work, I enjoy spending time with my family, my partner and my friends. Sharing everyday moments with them matters to me.",
+    interests: ["Travel", "Football", "Padel"],
+    football:
+      "I also love going to matches. I'm a big fan of Belgrano de Córdoba.",
+    workHeading: "How I work",
     collaboration:
-      "I work in Agile, Scrum and Kanban environments, with proactive communication, collaboration and adaptation across technical and non-technical teams.",
+      "At work, I value that same sense of connection: a team where people communicate, collaborate and get along. I like taking initiative, adapting when things change and working with both technical and non-technical colleagues.",
+    agile:
+      "Agile environments, including Scrum and Kanban, are part of how I work with others.",
+    englishPurpose:
+      "English is an important tool for communicating, learning and collaborating with international teams.",
+    portraitAlt: `Portrait of ${profile.name} outdoors, wearing a green jacket with a landscape behind him.`,
+    mateAlt: "A hand holding a mate beside a laptop.",
   },
 } satisfies PortfolioContent;

@@ -18,7 +18,7 @@ export const es = {
     skills: "Conocimientos técnicos",
     education: "Formación",
     certifications: "Certificaciones",
-    additional: "Información adicional",
+    about: "Sobre mí",
   },
   labels: {
     language: "Idioma",
@@ -243,10 +243,21 @@ export const es = {
     imageCaption:
       "Imagen editorial conceptual. Los documentos representados no son mis certificados reales.",
   },
-  additional: {
-    evolution:
-      "Mi recorrido desde el desarrollo web, pasando por la automatización de pruebas, hasta la ingeniería de datos aporta una mirada centrada en la validación, la fiabilidad y la calidad del software a mi trabajo actual.",
+  about: {
+    headline: "Personas, lugares y tiempo compartido.",
+    personal:
+      "Fuera del trabajo disfruto pasar tiempo con mi familia, mi pareja y mis amigos. Compartir lo cotidiano con ellos es importante para mí.",
+    interests: ["Viajar", "Fútbol", "Pádel"],
+    football:
+      "También me gusta ir a la cancha. Soy muy fanático de Belgrano de Córdoba.",
+    workHeading: "Cómo trabajo",
     collaboration:
-      "Trabajo en entornos Agile, Scrum y Kanban, con comunicación proactiva, colaboración y adaptación entre equipos técnicos y no técnicos.",
+      "En el trabajo también valoro esa cercanía: un equipo que se comunique, colabore y tenga buenas relaciones. Me gusta tomar la iniciativa, adaptarme cuando las cosas cambian y trabajar con compañeros de perfiles técnicos y no técnicos.",
+    agile:
+      "Los entornos Agile, con Scrum y Kanban, forman parte de mi manera de trabajar con otros.",
+    englishPurpose:
+      "El inglés es una herramienta importante para comunicarme, aprender y colaborar con equipos internacionales.",
+    portraitAlt: `Retrato de ${profile.name} al aire libre, con chaqueta verde y un paisaje de fondo.`,
+    mateAlt: "Una mano sosteniendo un mate junto a un portátil.",
   },
 } satisfies PortfolioContent;
