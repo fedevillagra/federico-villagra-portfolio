@@ -21,9 +21,11 @@ export function CurrentWork({ locale }: { locale: Locale }) {
       className={styles.section}
       aria-labelledby="current-work-heading"
     >
-      <header className={styles.opening}>
+      <header data-reveal="heading" className={styles.opening}>
         <p className={styles.index}>
-          <span aria-hidden="true">01</span>
+          <span data-motion-number aria-hidden="true">
+            01
+          </span>
           {work.label}
         </p>
         <div>
@@ -36,7 +38,7 @@ export function CurrentWork({ locale }: { locale: Locale }) {
       </header>
 
       <div className={styles.scene}>
-        <div className={styles.image}>
+        <div data-reveal="image" className={styles.image}>
           <Image
             src="/images/data-engineering-workflow.png"
             width={1672}
@@ -67,7 +69,11 @@ export function CurrentWork({ locale }: { locale: Locale }) {
           <h3 id="pipeline-heading">{work.pipelineLabel}</h3>
           <p>{work.pipelineNote}</p>
         </div>
-        <ol className={styles.stages} aria-labelledby="pipeline-heading">
+        <ol
+          data-reveal="pipeline"
+          className={styles.stages}
+          aria-labelledby="pipeline-heading"
+        >
           {pipelineStages.map((stage, index) => (
             <li key={stage}>
               <div className={styles.stageTitle}>
@@ -87,7 +93,7 @@ export function CurrentWork({ locale }: { locale: Locale }) {
         </ol>
       </div>
 
-      <div className={styles.tooling}>
+      <div data-motion-work-tools className={styles.tooling}>
         <p className={styles.eyebrow}>{copy.labels.technologies}</p>
         <ul>
           {skillGroups.data.map((id) => (
@@ -98,7 +104,7 @@ export function CurrentWork({ locale }: { locale: Locale }) {
 
       <div className={styles.responsibilities}>
         <h3>{work.responsibilitiesLabel}</h3>
-        <dl className={styles.domains}>
+        <dl data-motion-domains className={styles.domains}>
           {work.responsibilities.map((item, index) => (
             <div key={item.title}>
               <dt>

@@ -17,9 +17,11 @@ export function Contact({ locale }: { locale: Locale }) {
       className={styles.section}
       aria-labelledby="contact-heading"
     >
-      <header className={styles.opening}>
+      <header data-reveal="heading" className={styles.opening}>
         <p className={styles.index}>
-          <span aria-hidden="true">07</span>
+          <span data-motion-number aria-hidden="true">
+            07
+          </span>
           {copy.headings.contact}
         </p>
         <div className={styles.invitation}>
@@ -27,18 +29,33 @@ export function Contact({ locale }: { locale: Locale }) {
           <p>{copy.contact.introduction}</p>
         </div>
       </header>
-      <a className={styles.email} href={`mailto:${contactDetails.email}`}>
+      <a
+        data-reveal="quiet"
+        data-motion-link
+        data-motion-email
+        className={styles.email}
+        href={`mailto:${contactDetails.email}`}
+      >
         {mailbox}
         <wbr />@{domain}
       </a>
-      <div className={styles.connections}>
+      <div data-reveal="line" className={styles.connections}>
         <p className={styles.location}>{profile.location}</p>
         <ul>
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} target="_blank" rel="noopener noreferrer">
+              <a
+                data-motion-link
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {link.label}
-                <span className={styles.arrow} aria-hidden="true">
+                <span
+                  data-motion-arrow="out"
+                  className={styles.arrow}
+                  aria-hidden="true"
+                >
                   ↗
                 </span>
                 <span
@@ -61,9 +78,11 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           {profile.name}
           <span lang="en">{profile.currentRole}</span>
         </p>
-        <a href="#top">
+        <a data-motion-link data-motion-top href="#top">
           {content[locale].contact.backToTop}
-          <span aria-hidden="true">↑</span>
+          <span data-motion-arrow="up" aria-hidden="true">
+            ↑
+          </span>
         </a>
       </div>
     </footer>

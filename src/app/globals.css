@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./motion.css";
 
 :root {
   --background: #f7f5ef;
@@ -21,7 +22,7 @@
   --reading-width: 72ch;
   --portrait-width: 22.5rem;
   --radius-small: 0.125rem;
-  --motion-fast: 140ms;
+  --motion-fast: 180ms;
 }
 
 @theme inline {
@@ -161,9 +162,6 @@ article + article {
   font-size: 0.9375rem;
   text-decoration: none;
 }
-.primary-navigation a:hover {
-  text-decoration: underline;
-}
 .language-navigation {
   font-size: 0.8125rem;
 }
@@ -176,12 +174,10 @@ article + article {
 }
 .language-navigation a[aria-current="page"] {
   color: var(--accent);
-  text-decoration: underline;
   font-weight: 600;
 }
 .language-navigation a:hover {
   color: var(--accent);
-  text-decoration: underline;
 }
 .skip-link {
   position: absolute;

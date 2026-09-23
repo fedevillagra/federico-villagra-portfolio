@@ -66,7 +66,6 @@
 .section a:hover,
 .footer a:hover {
   color: var(--border);
-  text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
@@ -103,10 +102,7 @@
   text-decoration: none;
 }
 .arrow {
-  transition: transform var(--motion-fast) ease;
-}
-.connections a:hover .arrow {
-  transform: translate(2px, -2px);
+  transition: transform var(--motion-feedback) var(--motion-ease-feedback);
 }
 .footer {
   color: var(--background);

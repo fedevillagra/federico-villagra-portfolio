@@ -22,7 +22,7 @@ function ArchiveDate({ period, locale }: { period: Period; locale: Locale }) {
     }).format(new Date(`${date}-01T00:00:00Z`));
   return (
     <div className={styles.date}>
-      <span className={styles.year} aria-hidden="true">
+      <span data-motion-year className={styles.year} aria-hidden="true">
         {startYear}
         {endYear && endYear !== startYear && <span>—{endYear.slice(2)}</span>}
       </span>
@@ -65,9 +65,12 @@ export function Experience({ locale }: { locale: Locale }) {
       className={styles.section}
       aria-labelledby="experience-heading"
     >
-      <header className={styles.opening}>
+      <header data-reveal="heading" className={styles.opening}>
         <p className={styles.label}>
-          <span aria-hidden="true">02 /</span> {archive.label}
+          <span data-motion-number aria-hidden="true">
+            02 /
+          </span>{" "}
+          {archive.label}
         </p>
         <div className={styles.intro}>
           <h2 id="experience-heading">{copy.headings.experience}</h2>
@@ -83,6 +86,8 @@ export function Experience({ locale }: { locale: Locale }) {
               key={id}
               className={styles.record}
               data-role={id}
+              data-reveal="record"
+              data-motion-rule
               aria-labelledby={`experience-${id}`}
             >
               <ArchiveDate period={fact.period} locale={locale} />

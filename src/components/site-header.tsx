@@ -18,7 +18,9 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           {Object.entries(visualContent[locale].navigation).map(
             ([id, label]) => (
               <li key={id}>
-                <a href={`#${id}`}>{label}</a>
+                <a data-motion-link href={`#${id}`}>
+                  {label}
+                </a>
               </li>
             ),
           )}
@@ -29,6 +31,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           {Object.entries(locales).map(([code, language]) => (
             <li key={code}>
               <a
+                data-motion-link
                 href={language.path}
                 lang={code}
                 hrefLang={code}

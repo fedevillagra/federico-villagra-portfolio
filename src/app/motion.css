@@ -1,0 +1,307 @@
+/* Shared vocabulary. All content remains visible without animation or JS. */
+:root {
+  --motion-normal: 380ms;
+  --motion-slow: 600ms;
+  --motion-entry: 700ms;
+  --motion-stagger: 80ms;
+  --motion-distance: 6px;
+  --motion-feedback: 210ms;
+  --motion-rule-duration: 440ms;
+  --motion-group-stagger: 60ms;
+  --motion-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-feedback: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.primary-navigation a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+.primary-navigation a[aria-current="location"] {
+  color: var(--accent);
+}
+[data-motion-email] {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+[data-motion-tools] li {
+  transition: border-color var(--motion-feedback) var(--motion-ease-feedback);
+}
+[data-motion-top] > span,
+[data-motion-tools] li > span,
+[data-motion-credential] a > span[lang] {
+  transition:
+    translate var(--motion-feedback) var(--motion-ease-feedback),
+    color var(--motion-feedback) var(--motion-ease-feedback);
+}
+[data-motion-credential]:focus-within {
+  border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  .site-header,
+  [data-entry] {
+    animation: editorial-entry var(--motion-entry) var(--motion-ease-out)
+      backwards;
+  }
+  [data-entry="first"] {
+    animation-delay: var(--motion-stagger);
+  }
+  [data-entry="last"] {
+    animation-delay: calc(var(--motion-stagger) * 2);
+  }
+  [data-entry="role"],
+  [data-entry="description"] {
+    animation-delay: calc(var(--motion-stagger) * 3);
+  }
+  [data-entry="portrait"] {
+    animation-delay: calc(var(--motion-stagger) * 4);
+  }
+  [data-entry="metadata"] {
+    animation-delay: calc(var(--motion-stagger) * 5);
+  }
+  [data-entry="endnote"] {
+    animation-delay: calc(var(--motion-stagger) * 6);
+  }
+  [data-motion-credential] a:focus-visible > span[lang] {
+    translate: 3px 0;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    [data-motion-tools] li:hover {
+      border-color: var(--accent);
+    }
+    [data-motion-tools] li:hover > span {
+      translate: 3px 0;
+    }
+    [data-motion-credential]:hover {
+      border-color: var(--accent);
+    }
+    [data-motion-credential] a:hover > span[lang] {
+      translate: 3px 0;
+    }
+  }
+}
+@keyframes editorial-entry {
+  from {
+    opacity: 0.94;
+    translate: 0 var(--motion-distance);
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --motion-distance: 4px;
+    --motion-entry: 500ms;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-feedback: 0ms;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  [data-motion-top] > span,
+  [data-motion-tools] li > span,
+  [data-motion-credential] a > span[lang] {
+    transition: none;
+    translate: none;
+  }
+  /* Also neutralize the small arrow transforms from the static foundation. */
+  :is(#main-content, #top)
+    a:is(:hover, :focus-visible)
+    > span[aria-hidden="true"],
+  [data-motion-top]:is(:hover, :focus-visible) > span {
+    transform: none;
+    translate: none;
+  }
+}
+
+[data-reveal="line"],
+[data-motion-rule] {
+  position: relative;
+}
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal="line"][data-motion-entered]::before,
+  [data-motion-rule][data-motion-entered]::before {
+    content: "";
+    position: absolute;
+    inset: -1px 0 auto;
+    height: 1px;
+    background: currentColor;
+    transform-origin: left;
+    pointer-events: none;
+    animation: editorial-line var(--motion-rule-duration) var(--motion-ease-out)
+      both;
+  }
+}
+@keyframes editorial-line {
+  from {
+    transform: scaleX(0);
+    opacity: 0.45;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+
+/* Underlines stay attached to the link box, including wrapped credentials. */
+a[data-motion-link] {
+  position: relative;
+  text-decoration: none;
+}
+a[data-motion-link]::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0.2em;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+  transition: transform var(--motion-feedback) var(--motion-ease-feedback);
+}
+a[data-motion-link="permanent"]::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0.2em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+  pointer-events: none;
+}
+a[data-motion-link][aria-current]::after,
+a[data-motion-link]:focus-visible::after {
+  transform: scaleX(1);
+}
+[data-motion-arrow] {
+  --arrow-x: 0px;
+  --arrow-y: 0px;
+  transition: transform var(--motion-feedback) var(--motion-ease-feedback);
+}
+[data-motion-arrow="out"] {
+  --arrow-x: 3px;
+  --arrow-y: -3px;
+}
+[data-motion-arrow="down-right"] {
+  --arrow-x: 3px;
+  --arrow-y: 3px;
+}
+[data-motion-arrow="down"] {
+  --arrow-y: 3px;
+}
+[data-motion-arrow="up"] {
+  --arrow-y: -3px;
+}
+[data-motion-tools] small,
+[data-motion-work-tools] li,
+[data-motion-domains] dt,
+[data-motion-domains] dt > span,
+#experience [data-role],
+#experience [data-role] h3,
+#experience [data-motion-year] {
+  transition:
+    color var(--motion-feedback) var(--motion-ease-feedback),
+    transform var(--motion-feedback) var(--motion-ease-feedback),
+    border-color var(--motion-feedback) var(--motion-ease-feedback);
+}
+[data-motion-image-hover] {
+  overflow: hidden;
+}
+[data-motion-image-hover] img {
+  transition: transform var(--motion-slow) var(--motion-ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  a[data-motion-link]:hover::after {
+    transform: scaleX(1);
+  }
+  [data-motion-tools] li:hover small {
+    color: var(--foreground);
+  }
+  [data-motion-work-tools] li:hover {
+    color: var(--border);
+  }
+  [data-motion-domains] > div:hover dt > span {
+    color: var(--background);
+  }
+  #experience [data-role]:hover {
+    border-color: var(--accent);
+  }
+  #experience [data-role]:hover h3,
+  #experience [data-role]:hover [data-motion-year] {
+    color: var(--accent);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a[data-motion-link]:focus-visible [data-motion-arrow] {
+    transform: translate(var(--arrow-x), var(--arrow-y));
+  }
+  [data-motion-entered] [data-motion-number] {
+    animation: editorial-number var(--motion-normal) var(--motion-ease-out);
+  }
+  [data-motion-year-panel][data-motion-entered] > p:first-child {
+    animation: editorial-entry var(--motion-normal) var(--motion-ease-out)
+      var(--motion-group-stagger) backwards;
+  }
+  [data-entry="endnote"] {
+    position: relative;
+  }
+  [data-entry="endnote"]::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 -1px;
+    height: 1px;
+    background: var(--accent);
+    transform-origin: left;
+    pointer-events: none;
+    animation: editorial-line var(--motion-rule-duration) var(--motion-ease-out)
+      calc(var(--motion-stagger) * 6) both;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    a[data-motion-link]:hover [data-motion-arrow] {
+      transform: translate(var(--arrow-x), var(--arrow-y));
+    }
+    [data-motion-work-tools] li:hover,
+    [data-motion-domains] > div:hover dt {
+      transform: translateX(2px);
+    }
+    [data-motion-image-hover]:hover img {
+      transform: scale(1.015);
+    }
+  }
+}
+@keyframes editorial-number {
+  from {
+    opacity: 0.9;
+    transform: translateY(3px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  a[data-motion-link]::after,
+  [data-motion-image-hover] img,
+  [data-motion-arrow],
+  [data-motion-tools] small,
+  [data-motion-work-tools] li,
+  [data-motion-domains] dt,
+  [data-motion-domains] dt > span,
+  #experience [data-role],
+  #experience [data-role] h3,
+  #experience [data-motion-year] {
+    transition: none;
+  }
+}
+@media (forced-colors: active) {
+  a[data-motion-link] {
+    text-decoration: underline;
+  }
+}

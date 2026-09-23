@@ -110,21 +110,12 @@
   line-height: 1.18;
   text-decoration: none;
 }
-.documents a:hover > span[lang] {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.15em;
-}
 .arrow {
   flex-shrink: 0;
   color: var(--accent);
   font-family: var(--font-body), sans-serif;
   font-size: 1.3rem;
-  transition: transform var(--motion-fast) ease;
-}
-.documents a:hover .arrow,
-.documents a:focus-visible .arrow {
-  transform: translate(2px, -2px);
+  transition: transform var(--motion-feedback) var(--motion-ease-feedback);
 }
 .groupNote {
   margin: var(--space-3) 0 0;

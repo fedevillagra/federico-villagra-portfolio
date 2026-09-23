@@ -17,17 +17,18 @@ export function Hero({ locale }: { locale: Locale }) {
   const current = experiences.data;
   const [firstName, ...surname] = profile.name.split(" ");
   return (
-    <header className={styles.hero}>
+    <header data-motion-hero className={styles.hero}>
       <h1 className={styles.name}>
-        <span>{firstName}</span> <span>{surname.join(" ")}</span>
+        <span data-entry="first">{firstName}</span>{" "}
+        <span data-entry="last">{surname.join(" ")}</span>
       </h1>
-      <p className={styles.role}>
+      <p data-entry="role" className={styles.role}>
         <span lang="en">{profile.currentRole}</span>
         <span>
           {visual.at} <strong>{organizations[current.employer]}</strong>
         </span>
       </p>
-      <figure className={styles.portrait}>
+      <figure data-entry="portrait" className={styles.portrait}>
         <Image
           src="/images/federico-villagra-portrait.webp"
           alt={visual.portraitAlt}
@@ -42,8 +43,10 @@ export function Hero({ locale }: { locale: Locale }) {
           {profile.location}
         </figcaption>
       </figure>
-      <p className={styles.description}>{copy.hero.description}</p>
-      <dl className={styles.metadata}>
+      <p data-entry="description" className={styles.description}>
+        {copy.hero.description}
+      </p>
+      <dl data-entry="metadata" className={styles.metadata}>
         <div className={styles.project}>
           <dt>{copy.labels.project}</dt>
           <dd>{organizations[current.project]}</dd>
@@ -63,14 +66,22 @@ export function Hero({ locale }: { locale: Locale }) {
           </dd>
         </div>
       </dl>
-      <div className={styles.endnote}>
-        <a className={styles.next} href="#current-work">
+      <div data-entry="endnote" className={styles.endnote}>
+        <a data-motion-link className={styles.next} href="#current-work">
           <span aria-hidden="true">01 /</span> {copy.currentWork.label}
-          <span aria-hidden="true">↓</span>
+          <span data-motion-arrow="down" aria-hidden="true">
+            ↓
+          </span>
         </a>
-        <a className={styles.action} href="#experience">
+        <a
+          data-motion-link="permanent"
+          className={styles.action}
+          href="#experience"
+        >
           {copy.hero.cta}
-          <span aria-hidden="true">↘</span>
+          <span data-motion-arrow="down-right" aria-hidden="true">
+            ↘
+          </span>
         </a>
       </div>
     </header>

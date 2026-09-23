@@ -35,9 +35,12 @@ export function Education({ locale }: { locale: Locale }) {
       aria-labelledby="education-heading"
       className={styles.section}
     >
-      <header className={styles.opening}>
+      <header data-reveal="quiet" className={styles.opening}>
         <p className={styles.label}>
-          <span aria-hidden="true">04 /</span> {map.label}
+          <span data-motion-number aria-hidden="true">
+            04 /
+          </span>{" "}
+          {map.label}
         </p>
         <h2 id="education-heading">{map.headline}</h2>
       </header>
@@ -51,7 +54,11 @@ export function Education({ locale }: { locale: Locale }) {
           </p>
           <h3 id="education-university">{copy.education.university.title}</h3>
         </header>
-        <div className={styles.universityPeriod}>
+        <div
+          data-reveal="quiet"
+          data-motion-year-panel
+          className={styles.universityPeriod}
+        >
           <p className={styles.year}>
             <time dateTime={university.period.start}>
               {university.period.start}
@@ -61,7 +68,11 @@ export function Education({ locale }: { locale: Locale }) {
           <p className={styles.present}>{copy.labels.present}</p>
           <p className={styles.status}>{copy.labels[university.status]}</p>
         </div>
-        <dl className={styles.foundations}>
+        <dl
+          data-reveal="group"
+          data-motion-desktop
+          className={styles.foundations}
+        >
           {map.foundations.map((item, index) => (
             <div key={item.title}>
               <dt>
@@ -75,7 +86,7 @@ export function Education({ locale }: { locale: Locale }) {
           ))}
         </dl>
       </article>
-      <div className={styles.complementary}>
+      <div data-reveal="line" data-motion-rule className={styles.complementary}>
         <header className={styles.secondaryOpening}>
           <h3>{map.complementary}</h3>
           <p>{map.complementaryNote}</p>

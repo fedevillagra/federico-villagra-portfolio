@@ -22,15 +22,18 @@ export function Certifications({ locale }: { locale: Locale }) {
       aria-labelledby="certifications-heading"
       className={styles.section}
     >
-      <header className={styles.opening}>
+      <header data-reveal="heading" className={styles.opening}>
         <p className={styles.label}>
-          <span aria-hidden="true">05 /</span> {copy.headings.certifications}
+          <span data-motion-number aria-hidden="true">
+            05 /
+          </span>{" "}
+          {copy.headings.certifications}
         </p>
         <h2 id="certifications-heading">{index.headline}</h2>
         <p className={styles.introduction}>{index.introduction}</p>
       </header>
       <div className={styles.composition}>
-        <div className={styles.scene}>
+        <div data-reveal="image" className={styles.scene}>
           <Image
             src="/images/certifications-editorial-workspace.png"
             width={1122}
@@ -47,6 +50,7 @@ export function Certifications({ locale }: { locale: Locale }) {
             return (
               <article
                 key={credential.id}
+                data-motion-credential
                 className={styles.record}
                 aria-labelledby={`certification-${credential.id}`}
               >
@@ -77,6 +81,7 @@ export function Certifications({ locale }: { locale: Locale }) {
                   {credential.documents.map((document) => (
                     <li key={document.id}>
                       <a
+                        data-motion-link
                         href={document.url}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -88,7 +93,11 @@ export function Certifications({ locale }: { locale: Locale }) {
                         <span lang={credential.nameLanguage}>
                           {document.name ?? credential.name}
                         </span>
-                        <span className={styles.arrow} aria-hidden="true">
+                        <span
+                          data-motion-arrow="out"
+                          className={styles.arrow}
+                          aria-hidden="true"
+                        >
                           ↗
                         </span>
                         <span

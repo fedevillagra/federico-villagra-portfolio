@@ -13,14 +13,18 @@ export function About({ locale }: { locale: Locale }) {
       className={styles.section}
       aria-labelledby="about-heading"
     >
-      <header className={styles.opening}>
+      <header data-reveal="quiet" className={styles.opening}>
         <p className={styles.label}>
-          <span aria-hidden="true">06 /</span> {copy.headings.about}
+          <span data-motion-number aria-hidden="true">
+            06 /
+          </span>{" "}
+          {copy.headings.about}
         </p>
         <h2 id="about-heading">{about.headline}</h2>
       </header>
       <div className={styles.photographs}>
         <Image
+          data-reveal="image"
           className={styles.portrait}
           src="/images/federico-villagra-outdoors.webp"
           width={3024}
@@ -31,6 +35,8 @@ export function About({ locale }: { locale: Locale }) {
           quality={75}
         />
         <Image
+          data-reveal="aside"
+          data-motion-desktop
           className={styles.mate}
           src="/images/mate-workday.jpeg"
           width={899}
@@ -55,7 +61,12 @@ export function About({ locale }: { locale: Locale }) {
         <p>{about.collaboration}</p>
         <p className={styles.agile}>{about.agile}</p>
       </div>
-      <div className={styles.language}>
+      <div
+        data-reveal="quiet"
+        data-motion-rule
+        data-motion-desktop
+        className={styles.language}
+      >
         <h3>{copy.labels.english}</h3>
         <p className={styles.level}>
           <span>{profile.englishLevel}</span>

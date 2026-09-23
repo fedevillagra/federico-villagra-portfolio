@@ -7,6 +7,7 @@ import { Education } from "./education";
 import { Experience } from "./experience";
 import { Hero } from "./hero";
 import { Knowledge } from "./knowledge";
+import { MotionController } from "./motion-controller";
 import { SiteHeader } from "./site-header";
 
 export function Portfolio({ locale }: { locale: Locale }) {
@@ -31,6 +32,7 @@ export function Portfolio({ locale }: { locale: Locale }) {
         <Contact locale={locale} />
       </main>
       <SiteFooter locale={locale} />
+      <MotionController />
     </>
   );
 }

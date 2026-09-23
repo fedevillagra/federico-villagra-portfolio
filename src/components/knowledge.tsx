@@ -23,22 +23,32 @@ export function Knowledge({ locale }: { locale: Locale }) {
       className={styles.section}
       aria-labelledby="skills-heading"
     >
-      <header className={styles.opening}>
+      <header data-reveal="heading" className={styles.opening}>
         <p className={styles.label}>
-          <span aria-hidden="true">03 /</span> {index.label}
+          <span data-motion-number aria-hidden="true">
+            03 /
+          </span>{" "}
+          {index.label}
         </p>
         <h2 id="skills-heading">{index.headline}</h2>
         <p className={styles.introduction}>{index.introduction}</p>
       </header>
       <div className={styles.focus}>
-        <article className={styles.data} aria-labelledby="knowledge-data">
+        <article
+          data-reveal="line"
+          data-motion-rule
+          className={styles.data}
+          aria-labelledby="knowledge-data"
+        >
           <p className={styles.context}>{index.current}</p>
           <h3 id="knowledge-data">
-            <span aria-hidden="true">01</span>
+            <span data-motion-number aria-hidden="true">
+              01
+            </span>
             {index.dataTitle}
           </h3>
           <p className={styles.description}>{copy.skills.data.description}</p>
-          <ul className={styles.primaryTools}>
+          <ul data-motion-tools className={styles.primaryTools}>
             {skillGroups.data.map((id) => (
               <li key={id}>
                 <span>{technologies[id]}</span>
@@ -52,7 +62,11 @@ export function Knowledge({ locale }: { locale: Locale }) {
             <p>{copy.skills.operations.description}</p>
           </div>
         </article>
-        <div className={styles.image}>
+        <div
+          data-reveal="image"
+          data-motion-image-hover
+          className={styles.image}
+        >
           <Image
             src="/images/knowledge-technical-systems.png"
             width={1448}
@@ -67,7 +81,9 @@ export function Knowledge({ locale }: { locale: Locale }) {
       <div className={styles.previous}>
         <article className={styles.group} aria-labelledby="knowledge-testing">
           <h3 id="knowledge-testing">
-            <span aria-hidden="true">02</span>
+            <span data-motion-number aria-hidden="true">
+              02
+            </span>
             {index.testingTitle}
           </h3>
           <p className={styles.context}>{index.previous}</p>
@@ -79,7 +95,9 @@ export function Knowledge({ locale }: { locale: Locale }) {
         </article>
         <article className={styles.group} aria-labelledby="knowledge-web">
           <h3 id="knowledge-web">
-            <span aria-hidden="true">03</span>
+            <span data-motion-number aria-hidden="true">
+              03
+            </span>
             {index.webTitle}
           </h3>
           <p className={styles.context}>{index.previous}</p>
@@ -98,7 +116,9 @@ export function Knowledge({ locale }: { locale: Locale }) {
       >
         <header>
           <h3 id="knowledge-foundations">
-            <span aria-hidden="true">04</span>
+            <span data-motion-number aria-hidden="true">
+              04
+            </span>
             {index.foundationsTitle}
           </h3>
           <p className={styles.context}>{index.coursework}</p>
