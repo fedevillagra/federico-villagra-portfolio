@@ -1,0 +1,193 @@
+---------------------------------------------------------------------------------------
+• título
+Federico Villagra
+Ingeniero de software junior en EPAM Systems
+Cordoba, Córdoba, Argentina
+https://federicovillagra.com/
+trabajo actual → EPAM Systems
+Educación actual → Universidad Nacional de Córdoba
+
+---------------------------------------------------------------------------------------
+• descripción
+Si estás leyendo esto, probablemente seas recruiter, una IA o mi mamá. En fin, acá viene la parte útil:
+
+🧑‍💻 +1 año de experiencia en ingeniería de software en desarrollo web → automatización de control de calidad → ingeniería de datos (D&P) en el ámbito de las telecomunicaciones.
+🚀 Actualmente trabajo en canalizaciones de datos de extremo a extremo (extractor → analizador → cargador): ingesta de datos de proveedores, validación/análisis, persistencia en Oracle y habilitación de informes/visualización.
+
+⚙️ Enfoque tecnológico: Java y Python para ETL, PL/SQL (Oracle) para modelado/fusión de datos, y Apache Kafka / Airflow / Flink para integración, orquestación y procesamiento de flujos/lotes.
+
+✅ Experiencia en automatización de control de calidad (Java + Selenium + JUnit + Cucumber), aportando una mentalidad centrada en la calidad a las soluciones de datos (validación, fiabilidad, supervisión).
+
+🤝 Me siento cómodo en equipos Agile/Scrum/Kanban: comunicación proactiva, responsabilidad, colaboración y rápida adaptación.
+
+🌍 Inglés: B2 (nivel intermedio alto).
+
+Top skills
+Java • PL/SQL • DevOps • Automatización QA • Infraestructura de software
+
+---------------------------------------------------------------------------------------
+• Experiencia
+EPAM Systems
+1 yr 8 mos
+Junior Data Engineer – CLARO
+Full-time
+Jan 2026 - Present · 9 mos
+Córdoba, Argentina · Remote
+
+Formo parte de un equipo de Data Engineering enfocado en el procesamiento de datos de telecomunicaciones. Trabajo sobre pipelines ETL productivos que integran información de distintos proveedores y plataformas de red, desde la extracción hasta su transformación, persistencia y consumo analítico.
+Mi trabajo se centra en el desarrollo, mantenimiento y soporte de procesos ETL bajo una arquitectura Extractor → Parser → Loader, utilizando principalmente Java, Python, Apache Kafka y Oracle/PLSQL.
+
+Responsabilidades:
+• Desarrollar, modificar y mantener pipelines ETL para datos de telecomunicaciones.
+• Implementar y mantener componentes Extractor, Parser y Loader en Java y Python.
+• Desarrollar y optimizar packages, procedures y functions en Oracle PL/SQL.
+• Integrar nuevas fuentes, equipos, contadores y KPIs a flujos de datos existentes.
+• Trabajar con Apache Kafka para la comunicación entre componentes.
+• Analizar y resolver incidentes productivos mediante SQL, logs y seguimiento end-to-end de los datos.
+• Ejecutar backfills y reprocesamientos históricos para recuperar información.
+• Diseñar controles automáticos para detectar y recuperar procesos ETL ante fallas.
+• Realizar validaciones post-implementación y controles de calidad de datos.
+• Trabajar sobre entornos Linux utilizando shell scripting, Git y herramientas de troubleshooting.
+• Colaborar con analistas funcionales, infraestructura y otros equipos técnicos en nuevos requerimientos e incidentes.
+
+Stack: Java, Python, Oracle SQL/PLSQL, Apache Kafka, Linux, Shell Scripting, Git, Airflow, Flink, MongoDB y Power BI.
+
+Skills: Python (Programming Language), Java, +2 skills
+
+Junior Software Test Automation Engineer – INDUMIX
+Part-time
+Jul 2025 - Dec 2025 · 6 mos
+Córdoba, Argentina · Remote
+
+Trabajé en un producto multifuncional para plantas de hormigón, creando una solución interna (alternativa a los sistemas comerciales) que integra React + TypeScript (UI), Python + FastAPI (servicios), PostgreSQL (datos) y una capa PLC personalizada (microcontroladores en C++), conectados a través de comunicación de estilo industrial (MQTT).
+
+Responsabilidades:
+• Derivación de casos de prueba a partir de historias de usuarios y requisitos, ejecutando pruebas funcionales y técnicas manuales en cada entrega.
+• Registro de informes detallados de errores y observaciones de control de calidad en Jira Kanban, garantizando la trazabilidad entre tickets, casos de prueba y correcciones.
+• Creación de automatización de la interfaz de usuario en Java utilizando Selenium WebDriver, JUnit y Maven (IntelliJ), aplicando el modelo de objetos de página y una estructura de pruebas limpia y fácil de mantener.
+• Desarrollé la automatización de la interfaz de usuario en Java utilizando Selenium WebDriver, JUnit y Maven (IntelliJ), aplicando el modelo de objetos de página y una estructura de pruebas limpia y fácil de mantener.
+• Realización de nuevas pruebas/comprobaciones de regresión después de las correcciones para validar la estabilidad antes de las implementaciones con las pruebas automatizadas.
+• Apoyo en las pruebas del lado del PLC investigando el software de simulación CODESYS y PLCNEXT ENGINEER, validando los temas MQTT, las secuencias y la sincronización de datos entre la interfaz de usuario ↔ API ↔ DB ↔ PLC.
+• Contribuyó a la mejora continua mediante documentación técnica y propuestas (por ejemplo, mejoras en el flujo de trabajo de migración de Alembic) y la participación activa en ceremonias ágiles.
+
+Skills: Jira, Agile Methodologies and +2 skills
+
+Pasante QA Automatizado (Java)
+Part-time
+Feb 2025 - Jun 2025 · 5 mos
+Cordoba, Córdoba, Argentina · Hybrid
+
+Particié en un programa de formación profesional enfocado en pruebas automatizadas de software con Java, aplicando las mejores prácticas de diseño de pruebas y metodologías ágiles, con la orientación continua de mentores senior a lo largo del programa. Tuvimos un taller presencial sobre soft skills y un curso intensivo de PL/SQL como parte de la formación.
+
+Actividades principales:
+• Desarrollo y ejecución de scripts de prueba automatizados utilizando Selenium WebDriver y Cucumber (framework BDD).
+• Uso de JUnit, Maven y Git para la gestión de pruebas y control de versiones.
+• Aplicación de una arquitectura de pruebas en capas: Business, Utils y Test.
+• Práctica de principios de clean code, diseño modular y estructuras de prueba mantenibles.
+
+Skills: Automatización QA, Java and +8 skills
+
+Desarrollador Web
+Aerobics Center · Part-time
+Dec 2023 - Dec 2024 · 1 yr 1 mo
+Cordoba, Córdoba, Argentina · On-site
+
+Trabajé como Desarrollador Web part-time para una plataforma e-commerce enfocada en capacitaciones y certificaciones para instructores de fitness, danza y ritmos.
+
+Responsabilidades principales:
+• Creación y actualización de contenido del sitio utilizando WordPress, WooCommerce y Elementor
+• Desarrollo de funcionalidades personalizadas con PHP, incluyendo plugins y scripts
+• Mejora de la experiencia de usuario y optimización de los flujos de gestión de productos
+• Implementación de diseños responsivos y estructuras optimizadas para SEO
+
+Este rol requirió una colaboración constante con equipos no técnicos para adaptar la plataforma a necesidades educativas.
+
+WordPress, WooCommerce and +3 skills
+
+---------------------------------------------------------------------------------------
+• Educación
+
+Universidad Nacional de Córdoba
+Ingeniería en Computación, Ciencias de la Computación e Ingeniería
+2018 – Present
+
+Activities and societies: A lo largo de la carrera, participé en varios proyectos de hardware y software en equipo, incluyendo un sensor digital de sonido y un sistema de alarma personalizado, un planificador de vuelo para drones, un sistema de gestión de datos con múltiples búferes, entre otros. En los proyectos de software utilicé principalmente lenguajes como C++ y Java.
+
+El plan de estudios abarca áreas clave como arquitectura de software, patrones de diseño, algoritmos y estructuras de datos, programación concurrente, sistemas operativos y buenas prácticas de ingeniería.
+
+Skills: Patrones de diseño, Arquitectura de software, +8 skills
+
+Mundos E
+Diplomatura en DevOps, Ingeniería de Software
+Nov 2024 – Aug 2025
+
+Grade: Certificado por la Universidad Nacional de Córdoba en colaboración con Mundos E.
+
+Activities and societies: Trabajo en equipo de desarrollo de software para el proyecto final con enfoque DevOps.
+
+Actualmente estoy cursando una diplomatura integral en DevOps que abarca prácticas y herramientas clave a lo largo del ciclo de vida del desarrollo de software.
+
+Los contenidos incluyen:
+• CI/CD con Jenkins y GitHub Actions
+• Docker y Kubernetes (con EKS en AWS)
+• Infraestructura como Código con Terraform
+• Servicios en la nube (AWS)
+• Administración de sistemas en Linux
+• Control de versiones con Git
+• Monitoreo con ELK Stack (Elastic Stack)
+
+El programa pone énfasis en la automatización, la seguridad, la contenerización y las estrategias de despliegue aplicadas a entornos reales de DevOps.
+
+Skills: GitHub, VirtualBox, +12 skills
+
+Coderhouse
+Programa de Desarrollo Web (JavaScript, React, Backend), Desarrollo de aplicaciones web
+Jan 2022 – Dec 2023
+
+Grade: Programa que incluye tres cursos.
+
+Activities and societies: Todas las cursadas incluyeron entregas semanales, mentorías personalizadas y un proyecto final evaluado por el instructor.
+
+Completé el programa intensivo de formación en desarrollo web de Coderhouse, con foco en MERN full-stack (MongoDB, Express, React, Node).
+
+Contenidos del programa:
+• Curso de JavaScript​: fundamentos de programación, manipulación del DOM y lógica asincrónica con promesas y fetch.
+• Curso de React JS: desarrollo de aplicaciones de una sola página (SPA) con Tailwind CSS, hooks, componentes, enrutamiento y manejo de estado.
+• Curso de Backend: creación de APIs RESTful con Node.js y Express, trabajando con bases de datos como MongoDB y Firebase, autenticación, operaciones CRUD y arquitectura MVC.
+
+El programa se centró en proyectos prácticos y flujos de trabajo reales del desarrollo de aplicaciones web.
+
+Skills: MongoDB, Express.js, +3 skills
+
+Universidad Tecnológica Nacional
+Diplomatura en Desarrollo Web Full-Stack, Desarrollo de aplicaciones web
+Aug 2021 – Apr 2022
+
+Grade: Con foco en desarrollo backend y bases de datos relacionales.
+
+Activities and societies: Tres proyectos individuales: uno enfocado en frontend y dos en funcionalidades backend.
+
+Completé una diplomatura en Desarrollo Web Full-Stack en la UTN, enfocada en la creación de aplicaciones web dinámicas utilizando tecnologías de programación modernas.
+
+Contenidos principales:
+• Diseño de interfaces responsivas con HTML5, CSS3, JavaScript y Bootstrap
+• Desarrollo de lógica backend avanzada con PHP y bases de datos relacionales con MySQL
+• Programación del lado del cliente y del servidor aplicando buenas prácticas
+
+Skills: PHP, MySQL, +3 skills
+
+---------------------------------------------------------------------------------------
+• certificaciones
+
+- OpenAI Cyber Deployment Practitioner (OpenAI)
+- ENGX BOOTCAMP COURSE (EPAM Systems)
+- English Language – B2 Level (CEFR) (Universidad Nacional de Córdoba)
+- Backend Course (Coderhouse)
+- React Js Course (Coderhouse)
+- JavaScript Course (Coderhouse)
+- Diploma in FullStack Web Programming (Universidad Tecnológica Nacional)
+- Entry-level Web Programmer (Universidad Tecnológica Nacional)
+- Programming with PHP and MySQL (Universidad Tecnológica Nacional)
+- Programming with PHP and MySQL - Advanced Level (Universidad Tecnológica Nacional)
+
+---------------------------------------------------------------------------------------

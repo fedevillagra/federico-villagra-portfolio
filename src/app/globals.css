@@ -1,0 +1,213 @@
+@import "tailwindcss";
+@import "./motion.css";
+
+:root {
+  --background: #f7f5ef;
+  --foreground: #272c29;
+  --muted: #62665e;
+  --border: #d8d5ca;
+  --accent: #285447;
+  --accent-foreground: #ffffff;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --page-width: 75rem;
+  --page-gutter: clamp(1.5rem, 4vw, 4rem);
+  --reading-width: 72ch;
+  --portrait-width: 22.5rem;
+  --radius-small: 0.125rem;
+  --motion-fast: 180ms;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-editorial);
+}
+
+html {
+  scroll-padding-block-start: var(--space-6);
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+}
+.page-width {
+  width: min(calc(100% - 2 * var(--page-gutter)), var(--page-width));
+  margin-inline: auto;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+p,
+ul,
+dl {
+  margin-block: var(--space-3);
+}
+ul {
+  list-style: disc;
+  padding-inline-start: var(--space-5);
+}
+li + li {
+  margin-block-start: var(--space-2);
+}
+a {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+a:focus-visible,
+main:focus-visible,
+.site-header:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: var(--radius-small);
+}
+a {
+  transition: color var(--motion-fast) ease;
+}
+a:hover {
+  color: var(--accent);
+}
+dt {
+  font-weight: 600;
+}
+dd {
+  margin-block-end: var(--space-2);
+}
+
+/* Below the hero, keep the approved semantic wireframe as readable prose. */
+main > section {
+  max-width: var(--reading-width);
+  margin-block-start: var(--space-7);
+  padding-block-start: var(--space-6);
+  border-block-start: 1px solid var(--border);
+}
+/* Preserve the approved About spacing when later sections follow it. */
+main > #about {
+  padding-block-end: var(--space-8);
+}
+article + article {
+  margin-block-start: var(--space-6);
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-block-end: 1px solid var(--border);
+}
+.site-header a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.site-identity {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+.site-identity span {
+  color: var(--accent);
+}
+.site-header :where(nav) ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-header :where(nav) li {
+  margin: 0;
+}
+.primary-navigation {
+  grid-row: 2;
+  grid-column: 1 / -1;
+  padding-block-start: var(--space-2);
+}
+.primary-navigation ul {
+  gap: var(--space-1) var(--space-5);
+}
+.primary-navigation a {
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
+.language-navigation {
+  font-size: 0.8125rem;
+}
+.language-navigation ul {
+  gap: var(--space-3);
+}
+.language-navigation a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.language-navigation a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+.language-navigation a:hover {
+  color: var(--accent);
+}
+.skip-link {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--page-gutter);
+  z-index: 10;
+  transform: translateY(-200%);
+  padding: var(--space-2) var(--space-4);
+  color: var(--accent-foreground);
+  background: var(--accent);
+}
+.skip-link:focus {
+  transform: none;
+  color: var(--accent-foreground);
+}
+
+@media (min-width: 75rem) {
+  .site-header {
+    grid-template-columns: 1fr auto auto;
+    column-gap: var(--space-7);
+    padding-block: var(--space-5);
+  }
+  .primary-navigation {
+    grid-row: auto;
+    grid-column: auto;
+    padding: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+  }
+}
