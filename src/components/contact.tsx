@@ -76,7 +76,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
       <div className={`page-width ${styles.signature}`}>
         <p>
           {profile.name}
-          <span lang="en">{profile.currentRole}</span>
+          <span>{content[locale].experiences.data.role}</span>
         </p>
         <a data-motion-link data-motion-top href="#top">
           {content[locale].contact.backToTop}

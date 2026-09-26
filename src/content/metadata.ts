@@ -21,6 +21,10 @@ export const socialImage = {
 export function portfolioMetadata(locale: Locale): Metadata {
   const { title, description } = content[locale].metadata;
   const current = locales[locale];
+  const localizedSocialImage = {
+    ...socialImage,
+    alt: `${profile.name} | ${content[locale].experiences.data.role}`,
+  };
   return {
     metadataBase: new URL(profile.siteUrl),
     title,
@@ -33,7 +37,7 @@ export function portfolioMetadata(locale: Locale): Metadata {
     },
     openGraph: {
       type: "website",
-      images: [socialImage],
+      images: [localizedSocialImage],
       title,
       description,
       url: canonicalUrls[locale],
@@ -46,7 +50,7 @@ export function portfolioMetadata(locale: Locale): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [socialImage],
+      images: [localizedSocialImage],
     },
   };
 }

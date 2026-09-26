@@ -246,8 +246,6 @@ export const en = {
     personal:
       "Outside work, I enjoy spending time with my family, my partner and my friends. Sharing everyday moments with them matters to me.",
     interests: ["Travel", "Football", "Padel"],
-    football:
-      "I also love going to matches. I'm a big fan of Belgrano de Córdoba.",
     workHeading: "How I work",
     collaboration:
       "At work, I value that same sense of connection: a team where people communicate, collaborate and get along. I like taking initiative, adapting when things change and working with both technical and non-technical colleagues.",

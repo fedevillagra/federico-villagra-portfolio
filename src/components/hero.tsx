@@ -23,7 +23,7 @@ export function Hero({ locale }: { locale: Locale }) {
         <span data-entry="last">{surname.join(" ")}</span>
       </h1>
       <p data-entry="role" className={styles.role}>
-        <span lang="en">{profile.currentRole}</span>
+        <span>{copy.experiences.data.role}</span>
         <span>
           {visual.at} <strong>{organizations[current.employer]}</strong>
         </span>

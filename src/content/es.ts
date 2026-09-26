@@ -1,13 +1,15 @@
 import { organizations as org, profile, technologies as tech } from "./facts";
 import type { PortfolioContent } from "./types";
 
+const currentRole = "Ingeniero de datos junior";
+
 export const es = {
   metadata: {
-    title: `${profile.name} | ${profile.currentRole}`,
-    description: `${profile.currentRole} en ${org.epam}. Trabajo en pipelines de telecomunicaciones con ${tech.java}, ${tech.python}, ${tech.oracle} y ${tech.kafka}.`,
+    title: `${profile.name} | ${currentRole}`,
+    description: `${currentRole} en ${org.epam}. Trabajo en pipelines de telecomunicaciones con ${tech.java}, ${tech.python}, ${tech.oracle} y ${tech.kafka}.`,
   },
   hero: {
-    description: `Trabajo en ${org.epam} como ${profile.currentRole}, desarrollando y manteniendo pipelines de datos en un proyecto de telecomunicaciones para ${org.claro}.`,
+    description: `Trabajo en ${org.epam} como ${currentRole}, desarrollando y manteniendo pipelines de datos en un proyecto de telecomunicaciones para ${org.claro}.`,
     area: "Ingeniería de datos / Telecomunicaciones",
     technologies: "Mis tecnologías principales",
     cta: "Conocé mi experiencia profesional",
@@ -88,7 +90,7 @@ export const es = {
   },
   experiences: {
     data: {
-      role: profile.currentRole,
+      role: currentRole,
       summary:
         "Desarrollo, mantenimiento y soporte productivo de procesos ETL para datos de telecomunicaciones.",
       responsibilities: [
@@ -97,7 +99,7 @@ export const es = {
       ],
     },
     automation: {
-      role: "Junior Software Test Automation Engineer",
+      role: "Ingeniero de Automatización de Pruebas Junior",
       summary:
         "QA y automatización de pruebas para un producto multifuncional de plantas de hormigón que integra interfaz web, servicios, base de datos y comunicación con PLC.",
       responsibilities: [
@@ -248,8 +250,6 @@ export const es = {
     personal:
       "Fuera del trabajo disfruto pasar tiempo con mi familia, mi pareja y mis amigos. Compartir lo cotidiano con ellos es importante para mí.",
     interests: ["Viajar", "Fútbol", "Pádel"],
-    football:
-      "También me gusta ir a la cancha. Soy muy fanático de Belgrano de Córdoba.",
     workHeading: "Cómo trabajo",
     collaboration:
       "En el trabajo también valoro esa cercanía: un equipo que se comunique, colabore y tenga buenas relaciones. Me gusta tomar la iniciativa, adaptarme cuando las cosas cambian y trabajar con compañeros de perfiles técnicos y no técnicos.",

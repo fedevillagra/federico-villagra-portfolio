@@ -80,12 +80,6 @@
   margin-inline-start: var(--space-5);
   color: var(--muted);
 }
-.football {
-  max-width: 42ch;
-  font-size: 1rem;
-  color: var(--muted);
-  margin: 0;
-}
 .work {
   padding-block-start: var(--space-5);
   border-block-start: 1px solid var(--border);

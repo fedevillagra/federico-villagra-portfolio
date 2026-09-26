@@ -54,7 +54,6 @@ export function About({ locale }: { locale: Locale }) {
             <li key={interest}>{interest}</li>
           ))}
         </ul>
-        <p className={styles.football}>{about.football}</p>
       </div>
       <div className={styles.work}>
         <h3>{about.workHeading}</h3>
