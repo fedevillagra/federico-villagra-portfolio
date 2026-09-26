@@ -53,6 +53,11 @@
   object-position: 50% 85%;
   border: 0.375rem solid var(--background);
 }
+.story {
+  display: grid;
+  align-content: start;
+  gap: var(--space-6);
+}
 .introduction {
   margin: 0;
   font-size: 1.125rem;
@@ -64,7 +69,7 @@
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-5);
   list-style: none;
-  margin: var(--space-5) 0;
+  margin: var(--space-5) 0 0;
   padding: 0;
   font-family: var(--font-editorial), Georgia, serif;
   font-size: 2rem;
@@ -156,7 +161,7 @@
   }
   .photographs {
     grid-column: 1;
-    grid-row: 2 / 4;
+    grid-row: 2;
   }
   .portrait {
     aspect-ratio: 3 / 4;
@@ -166,10 +171,7 @@
     width: 160px;
     height: 200px;
   }
-  .personal {
-    grid-column: 2;
-  }
-  .work {
+  .story {
     grid-column: 2;
   }
   .language {
@@ -207,7 +209,7 @@
   }
   .interests {
     font-size: 2.75rem;
-    margin-block: var(--space-6);
+    margin-block: var(--space-6) 0;
   }
   .work {
     padding-block-start: var(--space-6);
