@@ -47,19 +47,20 @@ export function About({ locale }: { locale: Locale }) {
           quality={75}
         />
       </div>
-      <div className={styles.personal}>
-        <p className={styles.introduction}>{about.personal}</p>
-        <ul className={styles.interests}>
-          {about.interests.map((interest) => (
-            <li key={interest}>{interest}</li>
-          ))}
-        </ul>
-        <p className={styles.football}>{about.football}</p>
-      </div>
-      <div className={styles.work}>
-        <h3>{about.workHeading}</h3>
-        <p>{about.collaboration}</p>
-        <p className={styles.agile}>{about.agile}</p>
+      <div className={styles.story}>
+        <div>
+          <p className={styles.introduction}>{about.personal}</p>
+          <ul className={styles.interests}>
+            {about.interests.map((interest) => (
+              <li key={interest}>{interest}</li>
+            ))}
+          </ul>
+        </div>
+        <div className={styles.work}>
+          <h3>{about.workHeading}</h3>
+          <p>{about.collaboration}</p>
+          <p className={styles.agile}>{about.agile}</p>
+        </div>
       </div>
       <div
         data-reveal="quiet"

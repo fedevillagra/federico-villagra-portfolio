@@ -91,7 +91,7 @@ export const experiences = {
     contextTechnologies: [],
   },
   automation: {
-    employer: null,
+    employer: "epam",
     project: "indumix",
     period: { start: "2025-07", end: "2025-12" },
     technologies: ["java", "selenium", "junit", "maven"],

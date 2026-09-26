@@ -19,7 +19,7 @@ export function portfolioStructuredData(locale: Locale) {
       "@id": `${canonicalUrls.en}#person`,
       name: profile.name,
       url: canonicalUrls.en,
-      jobTitle: profile.currentRole,
+      jobTitle: content[locale].experiences.data.role,
       description,
       image: new URL("/images/federico-villagra-portrait.webp", profile.siteUrl)
         .href,

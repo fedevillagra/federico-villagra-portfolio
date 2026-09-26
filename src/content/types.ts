@@ -109,7 +109,6 @@ export type PortfolioContent = {
     headline: string;
     personal: string;
     interests: readonly string[];
-    football: string;
     workHeading: string;
     collaboration: string;
     agile: string;

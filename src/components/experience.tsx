@@ -95,12 +95,7 @@ export function Experience({ locale }: { locale: Locale }) {
                 {id === "data" && (
                   <p className={styles.current}>{archive.current}</p>
                 )}
-                <h3
-                  id={`experience-${id}`}
-                  lang={id === "data" || id === "automation" ? "en" : undefined}
-                >
-                  {text.role}
-                </h3>
+                <h3 id={`experience-${id}`}>{text.role}</h3>
                 <dl className={styles.organizations}>
                   {fact.employer && (
                     <div>
