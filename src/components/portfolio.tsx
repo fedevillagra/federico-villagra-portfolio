@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Locale } from "@/i18n/locales";
 import { About } from "./about";
 import { Certifications } from "./certifications";
@@ -33,6 +34,7 @@ export function Portfolio({ locale }: { locale: Locale }) {
       </main>
       <SiteFooter locale={locale} />
       <MotionController />
+      <Analytics />
     </>
   );
 }
