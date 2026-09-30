@@ -11,7 +11,10 @@ export const contactDetails = {
   email: "fedevillagra8@gmail.com",
   linkedin: "https://linkedin.com/in/federicovillagra",
   github: "https://github.com/fedevillagra",
-  cv: "https://drive.google.com/file/d/1DPItFyskfTAmGp2W0qXSzkBWPYI7101O/view?usp=sharing",
+  cv: {
+    en: "/cv/federico-villagra-cv-en.pdf",
+    es: "/cv/federico-villagra-cv-es.pdf",
+  },
 } as const;
 
 export const organizations = {
