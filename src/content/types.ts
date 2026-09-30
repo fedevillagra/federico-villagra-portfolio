@@ -40,6 +40,7 @@ export type PortfolioContent = {
     newTab: string;
     credentialGroup: string;
     inProgress: string;
+    previousStudies: string;
     completed: string;
     english: string;
     englishDescription: string;
@@ -88,11 +89,14 @@ export type PortfolioContent = {
   skills: Record<SkillGroupId, { title: string; description: string }>;
   learningMap: {
     label: string;
-    headline: string;
+    expectedGraduation: string;
     complementary: string;
     complementaryNote: string;
     foundations: readonly { title: string; description: string }[];
-    emphasis: Record<Exclude<EducationId, "university">, string>;
+    emphasis: Record<
+      Exclude<EducationId, "computerEngineering" | "softwareEngineering">,
+      string
+    >;
   };
   education: Record<EducationId, { title: string; description: string }>;
   credentialIndex: {

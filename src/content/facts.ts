@@ -21,6 +21,7 @@ export const organizations = {
   indumix: "INDUMIX",
   aerobics: "Aerobics Center",
   unc: "Universidad Nacional de Córdoba",
+  siglo21: "Universidad Siglo 21",
   mundos: "Mundos E",
   coderhouse: "Coderhouse",
   utn: "Universidad Tecnológica Nacional",
@@ -152,13 +153,20 @@ export type SkillGroupId = keyof typeof skillGroups;
 type EducationFact = {
   organization: OrganizationId;
   period: Period | null;
-  status: "inProgress" | "completed" | "unspecified";
+  status: "inProgress" | "previousStudies" | "completed" | "unspecified";
+  expectedGraduation?: string;
 };
 export const education = {
-  university: {
+  computerEngineering: {
     organization: "unc",
-    period: { start: "2018", end: null },
+    period: { start: "2018", end: "2026" },
+    status: "previousStudies",
+  },
+  softwareEngineering: {
+    organization: "siglo21",
+    period: { start: "2026", end: "2027" },
     status: "inProgress",
+    expectedGraduation: "2027-12",
   },
   devops: {
     organization: "mundos",
