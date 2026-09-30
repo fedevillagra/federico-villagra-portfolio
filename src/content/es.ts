@@ -38,6 +38,7 @@ export const es = {
     certificate: "Ver certificado",
     newTab: "se abre en una pestaña nueva",
     credentialGroup: "Certificados del programa de desarrollo web MERN.",
+    previousStudies: "Estudios previos",
     inProgress: "Estudios en curso",
     completed: "Formación completada",
     english: "Inglés",
@@ -185,7 +186,7 @@ export const es = {
   },
   learningMap: {
     label: "Educación",
-    headline: "Las bases detrás de la práctica.",
+    expectedGraduation: "Graduación estimada",
     complementary: "Formación complementaria",
     complementaryNote:
       "Programas específicos de entrega de software, desarrollo web y proyectos prácticos.",
@@ -193,16 +194,17 @@ export const es = {
       {
         title: "Software",
         description:
-          "Arquitectura y patrones de diseño. Algoritmos y estructuras de datos como base del desarrollo.",
+          "Diseño y construcción de software, desde algoritmos y estructuras de datos hasta arquitectura, patrones, bases de datos, testing y código mantenible.",
       },
       {
         title: "Sistemas",
         description:
-          "Concurrencia y sistemas operativos: estudiar cómo se ejecuta el software y cómo coordina su trabajo.",
+          "Comprensión de cómo funcionan los sistemas de cómputo, desde sistemas operativos y concurrencia hasta redes, arquitectura de computadoras e interacción hardware–software.",
       },
       {
         title: "Práctica",
-        description: `Proyectos de hardware y software en equipo, utilizando ${tech.cpp} y ${tech.java} en el trabajo de software.`,
+        description:
+          "Transformación de requisitos en sistemas funcionales mediante proyectos, trabajo en equipo, testing, debugging, análisis de trade-offs y toma de decisiones técnicas.",
       },
     ],
     emphasis: {
@@ -212,10 +214,15 @@ export const es = {
     },
   },
   education: {
-    university: {
+    computerEngineering: {
       title: "Ingeniería en Computación",
       description:
         "Estudios universitarios en arquitectura de software, patrones de diseño, algoritmos, estructuras de datos, concurrencia y sistemas operativos, con proyectos de hardware y software en equipo.",
+    },
+    softwareEngineering: {
+      title: "Ingeniería de Software",
+      description:
+        "Estudios universitarios en curso en Ingeniería de Software.",
     },
     devops: {
       title: "Formación en DevOps",

@@ -21,7 +21,7 @@ export const visualContent = {
     navigation: {
       experience: "Experiencia",
       skills: "Conocimientos",
-      education: "Formación",
+      education: "Educación",
       certifications: "Certificaciones",
       about: "Sobre mí",
       contact: "Contacto",

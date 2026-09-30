@@ -36,6 +36,7 @@ export const en = {
     certificate: "View certificate",
     newTab: "opens in a new tab",
     credentialGroup: "Certificates from the MERN web development program.",
+    previousStudies: "Previous studies",
     inProgress: "Studies in progress",
     completed: "Completed training",
     english: "English",
@@ -181,7 +182,7 @@ export const en = {
   },
   learningMap: {
     label: "Education",
-    headline: "The foundations behind the work.",
+    expectedGraduation: "Expected graduation",
     complementary: "Complementary learning",
     complementaryNote:
       "Focused programs in delivery, web development and practical software projects.",
@@ -189,16 +190,17 @@ export const en = {
       {
         title: "Software",
         description:
-          "Architecture and design patterns. Algorithms and data structures as a foundation for software development.",
+          "Designing and building software, from algorithms and data structures to architecture, patterns, databases, testing and maintainable code.",
       },
       {
         title: "Systems",
         description:
-          "Concurrency and operating systems: studying how software runs and coordinates its work.",
+          "Understanding how computing systems work, from operating systems and concurrency to networks, computer architecture and hardware–software interaction.",
       },
       {
         title: "Practice",
-        description: `Team hardware and software projects, using ${tech.cpp} and ${tech.java} in software work.`,
+        description:
+          "Turning requirements into working systems through projects, teamwork, testing, debugging, trade-offs and technical decision-making.",
       },
     ],
     emphasis: {
@@ -208,10 +210,14 @@ export const en = {
     },
   },
   education: {
-    university: {
+    computerEngineering: {
       title: "Computer Engineering",
       description:
         "University studies covering software architecture, design patterns, algorithms, data structures, concurrency and operating systems, with team hardware and software projects.",
+    },
+    softwareEngineering: {
+      title: "Software Engineering",
+      description: "Current university studies in Software Engineering.",
     },
     devops: {
       title: "DevOps training",

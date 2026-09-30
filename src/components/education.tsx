@@ -28,7 +28,7 @@ function PeriodText({ period, locale }: { period: Period; locale: Locale }) {
 export function Education({ locale }: { locale: Locale }) {
   const copy = content[locale];
   const map = copy.learningMap;
-  const university = education.university;
+
   return (
     <section
       id="education"
@@ -36,56 +36,73 @@ export function Education({ locale }: { locale: Locale }) {
       className={styles.section}
     >
       <header data-reveal="quiet" className={styles.opening}>
-        <p className={styles.label}>
+        <h2 id="education-heading" className={styles.label}>
           <span data-motion-number aria-hidden="true">
             04 /
           </span>{" "}
           {map.label}
-        </p>
-        <h2 id="education-heading">{map.headline}</h2>
+        </h2>
       </header>
-      <article
-        className={styles.university}
-        aria-labelledby="education-university"
+      <div className={styles.academicPath}>
+        {(["computerEngineering", "softwareEngineering"] as const).map((id) => {
+          const fact = education[id];
+          return (
+            <article
+              key={id}
+              data-reveal="quiet"
+              data-stage={fact.status === "inProgress" ? "current" : "previous"}
+              className={styles.academicRecord}
+              aria-labelledby={`education-${id}`}
+            >
+              <p className={styles.stage}>{copy.labels[fact.status]}</p>
+              <header className={styles.degree}>
+                <p className={styles.institution}>
+                  {organizations[fact.organization]}
+                </p>
+                <h3 id={`education-${id}`}>{copy.education[id].title}</h3>
+              </header>
+              <p className={styles.year}>
+                <time dateTime={fact.period.start}>{fact.period.start}</time>
+                <span>—</span>
+                <time dateTime={fact.period.end}>{fact.period.end}</time>
+              </p>
+              {"expectedGraduation" in fact && (
+                <p className={styles.expected}>
+                  {map.expectedGraduation} ·{" "}
+                  <time dateTime={fact.expectedGraduation}>
+                    {new Intl.DateTimeFormat(locale, {
+                      month: "short",
+                      year: "numeric",
+                      timeZone: "UTC",
+                    })
+                      .format(
+                        new Date(`${fact.expectedGraduation}-01T00:00:00Z`),
+                      )
+                      .replace(/^./, (letter) => letter.toUpperCase())}
+                  </time>
+                </p>
+              )}
+            </article>
+          );
+        })}
+      </div>
+      <dl
+        data-reveal="group"
+        data-motion-desktop
+        className={styles.foundations}
       >
-        <header className={styles.degree}>
-          <p className={styles.institution}>
-            {organizations[university.organization]}
-          </p>
-          <h3 id="education-university">{copy.education.university.title}</h3>
-        </header>
-        <div
-          data-reveal="quiet"
-          data-motion-year-panel
-          className={styles.universityPeriod}
-        >
-          <p className={styles.year}>
-            <time dateTime={university.period.start}>
-              {university.period.start}
-            </time>
-            <span aria-hidden="true">—</span>
-          </p>
-          <p className={styles.present}>{copy.labels.present}</p>
-          <p className={styles.status}>{copy.labels[university.status]}</p>
-        </div>
-        <dl
-          data-reveal="group"
-          data-motion-desktop
-          className={styles.foundations}
-        >
-          {map.foundations.map((item, index) => (
-            <div key={item.title}>
-              <dt>
-                <span aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                {item.title}
-              </dt>
-              <dd>{item.description}</dd>
-            </div>
-          ))}
-        </dl>
-      </article>
+        {map.foundations.map((item, index) => (
+          <div key={item.title}>
+            <dt>
+              <span aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              {item.title}
+            </dt>
+            <dd>{item.description}</dd>
+          </div>
+        ))}
+      </dl>
       <div data-reveal="line" data-motion-rule className={styles.complementary}>
         <header className={styles.secondaryOpening}>
           <h3>{map.complementary}</h3>
