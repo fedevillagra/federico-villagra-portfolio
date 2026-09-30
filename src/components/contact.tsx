@@ -9,7 +9,7 @@ export function Contact({ locale }: { locale: Locale }) {
   const links = [
     { label: "LinkedIn", href: contactDetails.linkedin },
     { label: "GitHub", href: contactDetails.github },
-    { label: copy.contact.cv, href: contactDetails.cv },
+    { label: copy.contact.cv, href: contactDetails.cv[locale] },
   ];
   return (
     <section
